@@ -10,6 +10,7 @@ import Link from 'next/link'
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Destinations', href: '/destinations' },
+  { name: 'Safaris', href: '/safaris' },
   { name: 'About Tavara', href: '/about' },
   { name: 'Contact us', href: '/contact' },
 ]
@@ -22,15 +23,15 @@ const NavigationBar = () => {
 
   setTimeout(() => {
     setLoading(false)
-  }, 2500);
+  }, 500);
 
 
   return (
    <>
    {loading ? <></> : 
-    <header className="bg-opacity-100 absolute inset-x-0 top-0 z-50  w-2/3 justify-center align-middle mx-auto ">
-    <nav className="w-full flex items-center justify-between p-6 sticky " aria-label="Global">
-      <div className="flex lg:flex-1">
+    <header className="bg-opacity-100 absolute inset-x-0 top-0 z-50  w-full md:w-2/3 justify-center align-middle mx-auto ">
+    <nav className="w-auto flex  justify-between p-6 sticky " aria-label="Global">
+      <div className="flex lg:flex-1 ">
        {!mobileMenuOpen &&  <Link href="/" className="-m-1.5 p-1.5">
           <span className="sr-only">Tavara Tours</span>
           <Image
@@ -63,7 +64,7 @@ const NavigationBar = () => {
       </div>
       <div className="hidden lg:flex lg:flex-1 lg:justify-end ">
     
-        <Link href="/contact" className="text-sm font-semibold leading-6 bg-red-500 text-white px-12 py-4  ">
+        <Link href="/contact" className="text-sm font-semibold leading-6 bg-red-500 text-white px-12 py-4 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-red-700 ">
         Enquire Now <span aria-hidden="true">&rarr; </span> 
         </Link>
          
@@ -71,7 +72,7 @@ const NavigationBar = () => {
     </nav> 
     <Dialog as="div" className={` ${!mobileMenuOpen && 'hidden'} lg:hidden `} open={mobileMenuOpen} onClose={setMobileMenuClose}>
       <div className="fixed inset-0 z-50" />
-      <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-transparent px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+      <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-cover bg-opacity-80 bg-[url('https://images.pexels.com/photos/20449623/pexels-photo-20449623/free-photo-of-leopard-in-sunlight-and-shadow.jpeg')] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
         <div className="flex items-center justify-between">
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Tavara</span>
@@ -103,7 +104,7 @@ const NavigationBar = () => {
                 >
                   <button
             type="submit"
-            className="-m-2.5 rounded-md p-2.5 text-gray-700"
+            className="-m-2.5 rounded-md p-2.5 text-white shadow-sm font-semibold"
             onClick={() => setMobileMenuOpen(false)}
           >
              {item.name}
@@ -116,7 +117,7 @@ const NavigationBar = () => {
 
             </div>
             <div className="py-6">
-            <Link href="/courses" className="text-sm font-semibold leading-6 text-white bg-[#160041] px-10 py-2 rounded-lg  ">
+            <Link href="/courses" className="text-sm font-semibold leading-6 bg-red-500 text-white px-12 py-4  transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-red-700 ">
          <button
             type="button"
             className="-m-2.5 rounded-md p-2.5 text-white"
