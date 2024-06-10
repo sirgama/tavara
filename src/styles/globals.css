@@ -2,6 +2,80 @@
   @tailwind components;
   @tailwind utilities;
 
+  *{
+    margin: 0;
+    padding: 0;
+    /* max-width: 100%; */
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+  
+  .whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  .whatsapp-button {
+    font-family: inherit;
+    font-size: 12px;
+    background: rgb(19, 173, 71);
+    color: white;
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  
+  .whatsapp-button span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .whatsapp-button svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .whatsapp-button:hover .svg-wrapper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+  }
+  
+  .whatsapp-button:hover svg {
+    transform: translateX(4.0em) rotate(360deg) scale(1.1);
+  }
+  
+  .whatsapp-button:hover span {
+    transform: translateX(8em);
+  }
+  
+  .whatsapp-button:active {
+    transform: scale(0.95);
+  }
+  
+  @keyframes fly-1 {
+    from {
+      transform: translateY(0.2em);
+    }
+  
+    to {
+      transform: translateY(-0.2em);
+    }
+  }
+  
+
+  .background-custom-color{
+    background: rgb(243,243,243);
+    background: linear-gradient(90deg, rgba(243,243,243,1) 0%, rgba(239,233,237,1) 50%, rgba(242,236,240,1) 100%);
+  }
+
   @layer base {
     :root {
       --background: 0 0% 100%;
@@ -73,4 +147,6 @@
     body {
       @apply bg-background text-foreground;
     }
+    
   }
+  

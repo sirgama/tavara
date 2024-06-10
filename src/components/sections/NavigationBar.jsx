@@ -29,7 +29,7 @@ const NavigationBar = () => {
   return (
    <>
    {loading ? <></> : 
-    <header className="bg-opacity-100 absolute inset-x-0 top-0 z-50  w-full md:w-2/3 justify-center align-middle mx-auto ">
+    <header className="bg-opacity-100 absolute inset-x-0 top-0 z-50  w-full md:w-11/12 justify-center align-middle mx-auto ">
     <nav className="w-auto flex  justify-between p-6 sticky " aria-label="Global">
       <div className="flex lg:flex-1 ">
        {!mobileMenuOpen &&  <Link href="/" className="-m-1.5 p-1.5">
