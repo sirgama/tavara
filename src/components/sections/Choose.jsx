@@ -1,41 +1,47 @@
 import Link from "next/link";
-import React from "react";
+import React, {useEffect} from "react";
+import { cn } from "@/lib/utils";
+import Safaricard from "./Homepage/Safaricard";
 
 const Choose = () => {
+  useEffect(() => {
+    const video = document.getElementById('autoplay-video');
+    if (video) {
+      video.play();
+    }
+  }, []);
   return (
-    <div className="relative w-full bg-choose bg-no-repeat bg-center bg-cover flex items-center  max-md:mt-40 max-sm:mt-48 h-[60vh] max-md:h-[55vh] max-sm:h-[80vh] bg-[url('https://videos.pexels.com/video-files/17842222/17842222-hd_1280_720_25fps.mp4')]">
-      <div className="absolute inset-0 bg-black opacity-70"></div>
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col md:flex-row items-center justify-between h-full w-4/5 mx-auto max-md:w-[95%] max-sm:w-[95%]">
-          <div className="flex flex-col justify-center md:w-1/2 p-8">
-            <div className="mb-6">
-              <h3 className="text-white uppercase max-md:text-center max-sm:text-center">
-                choosing us
-              </h3>
-              <h2 className="text-[#E8EEFF] font-black text-3xl md:text-5xl mt-2 max-md:text-center max-sm:text-center">
-                What Makes Us Different
-              </h2>
-            </div>
-            <Link
-              href="/packages"
-              className="bg-yellow-500 py-2 px-3 w-fit rounded-md max-md:mt-4 max-md:mx-auto max-sm:mx-auto"
-            >
-              <p className="text-white text-sm">Book now</p>
-            </Link>
-          </div>
-
-          <div className="flex justify-center md:w-1/2">
-            <p className="text-white md:text-lg max-md:text-base max-md:text-center max-sm:text-center">
-              As one of the leading safari companies in Africa, we have a
-              reputation for excellence and innovation. We offer a wide range of
-              safari options, from classic game drives, to walking safaris, to
-              fly-in safaris, to bespoke safaris. We work with the best lodges,
-              camps, and conservancies in Africa, and we support local
-              communities and conservation efforts. We are committed to giving
-              you the best safari experience possible.
-            </p>
-          </div>
+    <div className="relative w-full bg-choose bg-no-repeat bg-center bg-cover flex items-center  max-md:pt-40 max-sm:pt-48 h-[60vh] max-md:h-[55vh] max-sm:h-[80vh] ">
+           <video id="autoplay-video" className="absolute inset-0 h-full w-full object-cover" autoplay loop controls muted >
+    <source
+      src="https://res.cloudinary.com/dzhpqlsy9/video/upload/f_auto:video,q_auto/e773srewibrosc6oprto"
+      type="video/mp4"
+    />
+    Your browser does not support the video tag.
+  </video>
+      <div className="absolute inset-0 bg-black opacity-80"></div>
+      <div className="flex flex-col h-full justify-start items-middle mx-auto text-center gap-y-10  p-8 max-md:w-full max-sm:w-full max-md:mx-auto max-sm:mx-auto max-md:items-center max-sm:items-center max-md:p-3 max-sm:p-3 relative z-10">
+        <h3
+          className='
+            "font-extrabold text-[#FFE2DC]   text-4xl max-md:text-md max-sm:text-md max-md:text-center max-sm:text-center"
+          '
+        >
+          Handpicked Safari Deals
+        </h3>
+    
+        <p className="text-white font-semibold leading-6 max-md:text-center max-sm:text-center">
+        Step into a world of breathtaking landscapes, encounter exotic wildlife, and embrace the thrill of the untamed wilderness.  
+        </p>
+        <div className="mt-10 max-sm:mt-5 max-md:mt-5 w-full max-md:w-full max-sm:w-full max-md:mx-auto max-sm:mx-auto max-w-screen-lg mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 ">
+          <Safaricard />
+          <Safaricard />
+          <Safaricard />
+          <Safaricard />
+          <Safaricard />
+          <Safaricard />
+          <Safaricard />
         </div>
+      
       </div>
     </div>
   );

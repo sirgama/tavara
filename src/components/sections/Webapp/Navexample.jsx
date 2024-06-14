@@ -52,7 +52,7 @@ function NavigationMenuDemo() {
                   <Link
                     className="flex h-full w-full select-none bg-cover bg-center flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md opacity-50"
                     href="/courses"
-                    style={{ backgroundImage: 'url(https://images.pexels.com/photos/6142173/pexels-photo-6142173.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)', opacity:100 }}
+                    style={{ backgroundImage: 'url(https://res.cloudinary.com/dzhpqlsy9/image/upload/f_auto,q_auto/jevrsbff5om9didcg3el)', opacity:100 }}
                   >
                    
                     <div className="mb-2 mt-4 text-lg font-semibold text-white">
