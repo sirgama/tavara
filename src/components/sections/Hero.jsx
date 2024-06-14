@@ -26,8 +26,8 @@ const Hero = () => {
         <NavigationBar className=' ' />
       
 
-    <div className="slider-container w-screen  h-screen " >
-    {/* <Slider {...settings}>
+    <div className="slider-container w-screen -mr-20  h-screen " >
+    <Slider {...settings}>
         <div className="relative bg-cover bg-center h-screen w-screen bg-no-repeat bg-[url('https://res.cloudinary.com/dzhpqlsy9/image/upload/f_auto,q_auto/cqaoitm3j2bdghwn36ve')] transition duration-1000 ease-in  ">
         <div className="absolute inset-0 bg-black opacity-50 "></div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
@@ -63,7 +63,7 @@ const Hero = () => {
           <a href="#" className="bg-red-500 hover:bg-red-600 text-white font-bold py-6 px-10 ">View More</a>
         </div>
       </div>
-    </Slider> */}
+    </Slider>
     </div>
     </main>
   </div>
