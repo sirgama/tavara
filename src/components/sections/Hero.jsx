@@ -18,12 +18,12 @@ const Hero = () => {
        
       };
   return (
-    <div className="min-h-screen w-screen flex flex-col">
+    <div className="min-h-screen w-screen ">
    
 
-    <main className="flex-grow ">
+    <main className=" ">
         {/* <Navbar className=' absolute' /> */}
-        <NavigationBar className=' absolute' />
+        <NavigationBar className=' ' />
       
 
     <div className="slider-container w-screen  h-screen " >
