@@ -2,10 +2,10 @@
   @tailwind components;
   @tailwind utilities;
 
-  *{
+  body {
     margin: 0;
     padding: 0;
-    /* max-width: 100%; */
+    max-width: 100%;
     overflow-x: hidden;
     box-sizing: border-box;
   }
@@ -74,6 +74,11 @@
   .background-custom-color{
     background: rgb(243,243,243);
     background: linear-gradient(90deg, rgba(243,243,243,1) 0%, rgba(239,233,237,1) 50%, rgba(242,236,240,1) 100%);
+  }
+
+  .bg_custom_2 {
+    background: rgb(243,243,243);
+    background: linear-gradient(90deg, rgba(243,243,243,1) 0%, rgba(246,235,242,1) 100%);
   }
 
   @layer base {

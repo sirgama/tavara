@@ -6,6 +6,9 @@ const nextConfig = {
     styledComponents: true,
     reactRemoveProperties: true,
   },
+  images: {
+    domains: ['tailwindui.com', 'mdbcdn.b-cdn.net','res.cloudinary.com','tecdn.b-cdn.net','www.youtube.com','images.ctfassets.net', "images.ctfassets.net","images.pexels.com"],
+  },
 };
 
 export default nextConfig;

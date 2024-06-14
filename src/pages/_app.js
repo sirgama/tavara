@@ -1,14 +1,14 @@
 import "@/styles/globals.css";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Inter, Playfair_Display, Poppins } from "next/font/google";
 
 
 
 
-const playfair_display = Playfair_Display({ weight: ["400" ], subsets: ["cyrillic"]})
+const poppins = Poppins({ weight: ["400" ], subsets: ["latin"]})
 
 export default function App({ Component, pageProps }) {
   return (
-    <main className={playfair_display.className}>
+    <main className={poppins.className}>
       <Component {...pageProps} />;
     </main>
   )
