@@ -6,6 +6,7 @@ import NavigationBar from './NavigationBar'
 
 const Hero = () => {
     const settings = {
+      className: "slider",
         dots: false,
         fade: true,
         infinite: true,
@@ -26,7 +27,7 @@ const Hero = () => {
         <NavigationBar className=' ' />
       
 
-    <div className="slider-container w-screen -mr-20  h-screen " >
+    <div className="slider-container w-screen  h-screen " >
     <Slider {...settings}>
         <div className="relative bg-cover bg-center h-screen w-screen bg-no-repeat bg-[url('https://res.cloudinary.com/dzhpqlsy9/image/upload/f_auto,q_auto/cqaoitm3j2bdghwn36ve')] transition duration-1000 ease-in  ">
         <div className="absolute inset-0 bg-black opacity-50 "></div>
