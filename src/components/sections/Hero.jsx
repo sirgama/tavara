@@ -19,12 +19,12 @@ const Hero = () => {
        
       };
   return (
-    <div className="min-h-screen w-full ">
+    <div className="min-h-screen min-w-screen ">
    
 
     <main className=" ">
         {/* <Navbar className=' absolute' /> */}
-        <NavigationBar className=' ' />
+        {/* <NavigationBar className=' ' /> */}
       
 
     <div className="slider-container w-screen  h-screen " >

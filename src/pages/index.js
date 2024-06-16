@@ -6,6 +6,7 @@ import Aboutsection from "@/components/sections/Choose";
 import WhatsappButton from "@/components/sections/Webapp/WhatsappButton";
 import Partners from "@/components/sections/Homepage/Partners";
 import Aboutus from "@/components/sections/Homepage/Aboutus";
+import NavigationBar from "@/components/sections/NavigationBar";
 
 
 const playfair_display = Playfair_Display({ weight: ["400" ], subsets: ["cyrillic"]})
@@ -16,6 +17,7 @@ export default function Home() {
     <main
       className=''
     >
+      <NavigationBar />
     <Hero />
     <Partners />
     <Aboutus />
