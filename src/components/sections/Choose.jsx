@@ -23,18 +23,16 @@ const Choose = () => {
       <div className="flex flex-col h-full justify-start items-middle mx-auto text-center gap-y-10  p-8 max-md:w-full max-sm:w-full max-md:mx-auto max-sm:mx-auto max-md:items-center max-sm:items-center max-md:p-3 max-sm:p-3 relative z-10">
         <h3
           className='
-            "font-extrabold text-[#FFE2DC]   text-4xl max-md:text-md max-sm:text-md max-md:text-center max-sm:text-center"
+            "font-extrabold text-[#ffffff]   text-5xl max-md:text-md max-sm:text-md max-md:text-center max-sm:text-center"
           '
         >
-          Handpicked Safari Deals
+          Handpicked Package Deals
         </h3>
     
         <p className="text-white font-semibold leading-6 max-md:text-center max-sm:text-center">
         Step into a world of breathtaking landscapes, encounter exotic wildlife, and embrace the thrill of the untamed wilderness.  
         </p>
-        <div className="mt-10 max-sm:mt-5 max-md:mt-5 w-full max-md:w-full max-sm:w-full max-md:mx-auto max-sm:mx-auto max-w-screen-lg mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 ">
-          <Safaricard />
-          <Safaricard />
+        <div className="mt-5 max-sm:mt-5 max-md:mt-5 w-full max-md:w-full max-sm:w-full max-md:mx-auto max-sm:mx-auto max-w-screen-2xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 md:gap-8 ">
           <Safaricard />
           <Safaricard />
           <Safaricard />
