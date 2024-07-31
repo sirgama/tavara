@@ -1,12 +1,12 @@
 import React from "react";
 import Image from "next/image";
-import { Volkhov } from "next/font/google";
+import { Volkhov, Poppins } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { BsBuildings } from "react-icons/bs";
 import { IoIosHeartEmpty } from "react-icons/io";
 import { Progress } from "@/components/ui/progress";
 
-const volkhov = Volkhov({ subsets: ["latin"], weight: ["700"] });
+const volkhov = Poppins({ subsets: ["latin"], weight: ["700"] })
 
 const Book = () => {
   return (
