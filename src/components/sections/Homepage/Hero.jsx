@@ -60,7 +60,7 @@ const Hero = () => {
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
           <h1 className="text-4xl md:text-7xl font-bold mb-4">Explore Kenya’s Majestic National Parks</h1>
           <p className="text-lg md:text-xl mb-6">From the iconic Maasai Mara to the stunning Amboseli, immerse yourself in the beauty and wildlife of Kenya’s renowned national parks with our exclusive safari packages.</p>
-          <a href="#" className="bg-red-500 hover:bg-red-600 text-white font-bold py-6 px-10 ">View More</a>
+          <a href="#" className="bg-red-500 hover:bg-red-600 text-white font-bold py-6 px-10  ">View More</a>
         </div>
       </div>
     </Slider>
