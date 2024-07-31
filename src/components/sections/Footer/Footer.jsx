@@ -6,7 +6,7 @@ import logo from '../../../../public/tavara.png'
 const Footer = () => {
   return (
     <div>
-<footer class="bg-gradient-to-r from-indigo-100 to-[#ffc6c6] ">
+<footer class="bg-gradient-to-r from-indigo-100 to-[#ffc6c6]  ">
   <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
       <div>

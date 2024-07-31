@@ -20,7 +20,7 @@ const Choose = () => {
     />
     Your browser does not support the video tag.
   </video>
-      <div className="absolute inset-0 bg-black opacity-80"></div>
+      <div className="absolute inset-0 bg-black opacity-60 "></div>
       <div className="flex flex-col h-full justify-start items-middle mx-auto text-center gap-y-10  p-8 max-md:w-full max-sm:w-full max-md:mx-auto max-sm:mx-auto max-md:items-center max-sm:items-center max-md:p-3 max-sm:p-3 relative z-10">
         <h3
           className='
