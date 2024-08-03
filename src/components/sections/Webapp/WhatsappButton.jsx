@@ -3,7 +3,7 @@ import React from 'react'
 // components/WhatsappButton.js
 const WhatsappButton = () => {
     const handleClick = () => {
-      window.location.href = 'https://wa.me/254747086336'; // replace with your WhatsApp number
+      window.location.href = 'https://wa.me/254747086336'// replace with your WhatsApp number
     };
   
     return (

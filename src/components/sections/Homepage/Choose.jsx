@@ -8,9 +8,9 @@ const Choose = () => {
   useEffect(() => {
     const video = document.getElementById('autoplay-video');
     if (video) {
-      video.play();
+      video.play()
     }
-  }, []);
+  }, [])
   return (
     <div className="relative w-full bg-choose bg-no-repeat bg-center bg-cover flex items-center  max-md:pt-40 max-sm:pt-48 h-auto md:h-[60vh] max-md:h-[55vh] max-sm:h-full ">
            <video id="autoplay-video" className="absolute inset-0 h-full w-full object-cover" autoplay loop controls muted >
@@ -43,7 +43,7 @@ const Choose = () => {
       
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Choose;
+export default Choose

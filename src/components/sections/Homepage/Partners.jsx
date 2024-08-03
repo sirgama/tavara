@@ -46,7 +46,7 @@ const cardItems = [
     description:
       "Get an experience from the best Africa offers. You won’t regret even a single minute.",
   },
-];
+]
 
 const Partners = () => {
   return (
@@ -83,10 +83,10 @@ const Partners = () => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Partners;
+export default Partners
 
 const Card = ({ icon, title, description }) => {
   return (
@@ -94,5 +94,5 @@ const Card = ({ icon, title, description }) => {
       <Image src={icon} alt={title} height={150} width={150} />
    
     </div>
-  );
-};
+  )
+}

@@ -10,7 +10,7 @@ const volkhov = Poppins({ subsets: ["latin"], weight: ["700"] })
 
 const Book = () => {
   return (
-    <div className="w-[80%] max-w-screen-xl mx-auto max-md:mx-auto mt-20 mb-36 max-md:mt-20 max-sm:mt-20 flex max-md:flex-col max-sm:flex-col items-center justify-between gap-y-8 max-sm:gap-y-0 max-sm:gap-x-6 ">
+    <div className="w-[100%] max-w-screen-xl mx-auto max-md:mx-auto mt-20 mb-36 max-md:mt-20 max-sm:mt-20 flex max-md:flex-col max-sm:flex-col items-center justify-between gap-y-8 max-sm:gap-y-0 max-sm:gap-x-6 ">
       <div className="w-full max-md:w-[90%] max-sm:w-[90%] max-md:mx-auto max-sm:mx-auto mb-20 max-sm:mb-8 max-md:mb-8">
         <h3 className="font-semibold text-[#5E6282] text-left text-md">
           Easy and Fast
@@ -101,8 +101,8 @@ const Book = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
 const Step = ({ src, alt, title, description }) => {
   return (
@@ -115,7 +115,7 @@ const Step = ({ src, alt, title, description }) => {
         </p>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Book;
+export default Book

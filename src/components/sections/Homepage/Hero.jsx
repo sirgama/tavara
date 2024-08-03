@@ -40,7 +40,7 @@ const Hero = () => {
       <div className="relative bg-cover bg-center h-screen w-screen bg-[url('https://res.cloudinary.com/dzhpqlsy9/image/upload/f_auto,q_auto/yhqdnqqhobzfqxoteaqj')] transition duration-1000 ease-in ">
         <span className="absolute inset-0 bg-black opacity-50 "></span>
         <span className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
-          <h1 className="text-4xl md:text-7xl font-bold mb-4">Heard about Kenya&apos;s Coast?</h1>
+          <h1 className="text-4xl md:text-7xl font-bold mb-4">Heard about Kenyas Coast?</h1>
           <p className="text-lg md:text-xl mb-6">Journey through the legendary Maasai Mara, relax in Zanzibar’s paradise, and create memories that last a lifetime with our tailored holiday packages.</p>
           <a href="#" className="bg-red-500 hover:bg-red-600 text-white font-bold py-6 px-10 ">Explore Mara</a>
         </span>

@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import { Inter, Playfair_Display } from "next/font/google";
 
 import Hero from "@/components/sections/Homepage/Hero";

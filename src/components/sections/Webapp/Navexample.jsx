@@ -28,7 +28,7 @@ function NavigationMenuDemo() {
           </Link>
         </NavigationMenuItem>
       <NavigationMenuItem>
-          <Link href="/courses" legacyBehavior passHref>
+          <Link href="/about" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               About Tavara
             </NavigationMenuLink>
@@ -36,7 +36,7 @@ function NavigationMenuDemo() {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <Link href="/courses" legacyBehavior passHref>
+          <Link href="/packages" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Packages
             </NavigationMenuLink>
@@ -51,7 +51,7 @@ function NavigationMenuDemo() {
                 <NavigationMenuLink asChild>
                   <Link
                     className="flex h-full w-full select-none bg-cover bg-center flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md opacity-50"
-                    href="/courses"
+                    href="/destinations"
                     style={{ backgroundImage: 'url(https://res.cloudinary.com/dzhpqlsy9/image/upload/f_auto,q_auto/jevrsbff5om9didcg3el)', opacity:100 }}
                   >
                    
@@ -64,19 +64,19 @@ function NavigationMenuDemo() {
                   </Link>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="/about" title="Amboseli National Park">
+              <ListItem href="/destinations" title="Amboseli National Park">
               Maasai Mara National Park
               </ListItem>
-              <ListItem href="https://wa.me/+254777086336" title="Maasai Mara National Park">
+              <ListItem href="/destinations" title="Maasai Mara National Park">
               Maasai Mara National Park
               </ListItem>
-              <ListItem href="/contact" title="Diani Beach">
+              <ListItem href="/destinations" title="Diani Beach">
               Maasai Mara National Park
               </ListItem>
-              <ListItem href="/contact" title="Diani Beach">
+              <ListItem href="/destinations" title="Diani Beach">
               Maasai Mara National Park
               </ListItem>
-              <ListItem href="/contact" title="Diani Beach">
+              <ListItem href="/destinations" title="Diani Beach">
               Maasai Mara National Park
               </ListItem>
             </ul>
@@ -135,6 +135,6 @@ const ListItem = React.forwardRef(function ListItem(
     </li>
   );
 });
-ListItem.displayName = "ListItem";
+ListItem.displayName = "ListItem"
 
-export default NavigationMenuDemo;
+export default NavigationMenuDemo
