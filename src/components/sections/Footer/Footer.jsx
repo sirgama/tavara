@@ -6,7 +6,7 @@ import logo from '../../../../public/tavara.png'
 const Footer = () => {
   return (
     <div>
-<footer class="bg-[#1a1a3d]  ">
+<footer class="bg-[#1a1a3d]  text-white">
   <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
       <div>
@@ -46,7 +46,7 @@ const Footer = () => {
           <p class="font-medium">
             Company
           </p>
-          <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+          <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-100">
             <a class="hover:opacity-75" href> About Tavara </a>
             <a class="hover:opacity-75" href> Packages </a>
             <a class="hover:opacity-75" href> Destinations </a>
@@ -58,7 +58,7 @@ const Footer = () => {
           <p class="font-medium">
             Helpful Links
           </p>
-          <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+          <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-100">
             <a class="hover:opacity-75" href> Contact </a>
             <a class="hover:opacity-75" href> FAQs </a>
             <a class="hover:opacity-75" href> Live Chat </a>
@@ -68,7 +68,7 @@ const Footer = () => {
           <p class="font-medium">
             Legal
           </p>
-          <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+          <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-100">
             <a class="hover:opacity-75" href> Privacy Policy </a>
             <a class="hover:opacity-75" href> Terms & Conditions </a>
             <a class="hover:opacity-75" href> Privacy Policy </a>
@@ -78,10 +78,10 @@ const Footer = () => {
       </div>
     </div>
   <div className="flex flex-row w-full justify-between">
-  <p class="mt-8 text-xs text-gray-800">
+  <p class="mt-8 text-xs text-gray-100">
       © 2024 Tavara Tours & Travels
     </p>
-    <p class="mt-8 text-xs text-gray-800">
+    <p class="mt-8 text-xs text-gray-100">
       Designed and Built by janibit.com
     </p>
   </div>

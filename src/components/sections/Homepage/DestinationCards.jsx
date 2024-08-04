@@ -3,7 +3,7 @@ import React from 'react'
 const DestinationCards = () => {
   return (
     <div>
-        <div class="relative grid h-[30rem] w-full max-w-[24rem] flex-col items-end justify-center overflow-hidden rounded-xl bg-white bg-clip-border text-center text-gray-700">
+        <div class="relative grid h-[30rem] w-full max-w-[24rem] flex-col items-end justify-center overflow-hidden bg-indigo-500 shadow-lg shadow-indigo-500/50 bg-clip-border text-center text-gray-700 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
   <div class="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent bg-[url('https://images.pexels.com/photos/572861/pexels-photo-572861.jpeg?auto=compress&cs=tinysrgb&w=600')] bg-cover bg-clip-border bg-center text-gray-700 shadow-none">
     <div class="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-t from-black/80 via-black/50"></div>
   </div>
