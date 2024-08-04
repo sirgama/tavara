@@ -1,20 +1,27 @@
-"use client"
+"use client";
 import AllDestinations from "@/components/sections/Destinations/AllDestinations";
 import DestinationsHero from "@/components/sections/Destinations/DestinationsHero";
 import Footer from "@/components/sections/Footer/Footer";
 import NavigationBar from "@/components/sections/NavigationBar";
-import { Inter, Playfair_Display } from "next/font/google";
-
+import Head from "next/head";
 
 const destinations = () => {
   return (
-    <div>
-           <NavigationBar />
-           <DestinationsHero />
+    <main>
+      <Head>
+        <title>Available Destinations </title>
+        <meta name="description" content="Explore top travel destinations" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <body>
+        <NavigationBar />
+        <DestinationsHero />
         <AllDestinations />
         <Footer />
-    </div>
-  )
-}
+      </body>
+    </main>
+  );
+};
 
-export default destinations
+export default destinations;

@@ -3,7 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Link from "next/link";
 
-const DestinationsHero = () => {
+const ContactHero = () => {
   return (
     <div className=" ">
       <div class="h-auto bg-gray-50 flex items-center">
@@ -17,11 +17,11 @@ const DestinationsHero = () => {
               <Link
                 href="/"
                 class="text-md font-medium mb-6 hover:underline hover:ease-in-out hover:delay-150"
-              >
+              > 
                 Home {` `} {`>`}
               </Link>
               <Link href="/" class="text-md font-medium mb-6">
-                {` `} Destinations{" "}
+                {` `} Contact us{" "}
               </Link>
             </div>
           </div>
@@ -31,4 +31,4 @@ const DestinationsHero = () => {
   );
 };
 
-export default DestinationsHero;
+export default ContactHero;
