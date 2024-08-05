@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const DestinationCards = () => {
@@ -19,7 +20,7 @@ const DestinationCards = () => {
             type="button"
             data-ripple-light="true"
           >
-            Explore
+            <Link href='/destinations'>Explore </Link>
           </button>
         </div>
       </div>

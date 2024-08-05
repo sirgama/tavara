@@ -2,6 +2,7 @@
 import React from 'react'
 import Image from 'next/image'
 import logo from '../../../../public/tavara.png'
+import Link from 'next/link'
 
 const Footer = () => {
   return (
@@ -47,10 +48,10 @@ const Footer = () => {
             Company
           </p>
           <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-100">
-            <a class="hover:opacity-75" href> About Tavara </a>
-            <a class="hover:opacity-75" href> Packages </a>
-            <a class="hover:opacity-75" href> Destinations </a>
-            <a class="hover:opacity-75" href> Careers </a>
+            <Link class="hover:opacity-75" href='/about'> About Tavara </Link>
+            <Link class="hover:opacity-75" href='/safaris'> Packages </Link>
+            <Link class="hover:opacity-75" href='/destinations'> Destinations </Link>
+            <Link class="hover:opacity-75" href='/contact'> Careers </Link>
           </nav>
         </div>
     
@@ -59,9 +60,9 @@ const Footer = () => {
             Helpful Links
           </p>
           <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-100">
-            <a class="hover:opacity-75" href> Contact </a>
-            <a class="hover:opacity-75" href> FAQs </a>
-            <a class="hover:opacity-75" href> Live Chat </a>
+            <Link class="hover:opacity-75" href='/contact'> Contact </Link>
+            <Link class="hover:opacity-75" href='/contact'> FAQs </Link>
+            <Link class="hover:opacity-75" href='/contact'> Live Chat </Link>
           </nav>
         </div>
         <div>

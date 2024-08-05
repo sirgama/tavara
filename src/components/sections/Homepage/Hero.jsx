@@ -2,6 +2,7 @@ import React from 'react'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import Link from 'next/link';
 
 const Hero = () => {
     const settings = {
@@ -21,7 +22,7 @@ const Hero = () => {
     <div className="min-h-screen min-w-screen ">
    
 
-    <main className=" ">
+    <div className=" ">
         {/* <Navbar className=' absolute' /> */}
         {/* <NavigationBar className=' ' /> */}
       
@@ -33,7 +34,7 @@ const Hero = () => {
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
           <h1 className="text-4xl md:text-7xl font-bold mb-4">Adventure Awaits in Kenya’s Untamed</h1>
           <p className="text-lg md:text-xl mb-6">From the majestic Amboseli National Park to the pristine shores of Mombasa, explore our exclusive packages designed for the ultimate safari experience.</p>
-          <a href="#" className="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-10 ">View Packages</a>
+          <Link href="/destinations" className="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-10 ">View Packages</Link>
         </div>
       </div>
 
@@ -42,7 +43,7 @@ const Hero = () => {
         <span className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
           <h1 className="text-4xl md:text-7xl font-bold mb-4">Heard about Kenyas Coast?</h1>
           <p className="text-lg md:text-xl mb-6">Journey through the legendary Maasai Mara, relax in Zanzibar’s paradise, and create memories that last a lifetime with our tailored holiday packages.</p>
-          <a href="#" className="bg-red-500 hover:bg-red-600 text-white font-bold py-6 px-10 ">Explore Mara</a>
+          <Link href="/destinations" className="bg-red-500 hover:bg-red-600 text-white font-bold py-6 px-10 ">Explore Mara</Link>
         </span>
       </div>
 
@@ -51,7 +52,7 @@ const Hero = () => {
         <span className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
           <h1 className="text-4xl md:text-7xl font-bold mb-4">Experience the Magic of Kenya</h1>
           <p className="text-lg md:text-xl mb-6">Journey through the legendary Maasai Mara, relax in Zanzibar’s paradise, and create memories that last a lifetime with our tailored holiday packages.</p>
-          <a href="#" className="bg-red-500 hover:bg-red-600 text-white font-bold py-6 px-10 ">Explore Mara</a>
+          <Link href="/destinations" className="bg-red-500 hover:bg-red-600 text-white font-bold py-6 px-10 ">Explore Mara</Link>
         </span>
       </div>
 
@@ -60,12 +61,12 @@ const Hero = () => {
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
           <h1 className="text-4xl md:text-7xl font-bold mb-4">Explore Kenya’s Majestic National Parks</h1>
           <p className="text-lg md:text-xl mb-6">From the iconic Maasai Mara to the stunning Amboseli, immerse yourself in the beauty and wildlife of Kenya’s renowned national parks with our exclusive safari packages.</p>
-          <a href="#" className="bg-red-500 hover:bg-red-600 text-white font-bold py-6 px-10  ">View More</a>
+          <Link href="/destinations" className="bg-red-500 hover:bg-red-600 text-white font-bold py-6 px-10  ">View More</Link>
         </div>
       </div>
     </Slider>
     </div>
-    </main>
+    </div>
   </div>
   )
 }
