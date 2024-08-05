@@ -82,9 +82,9 @@ const Footer = () => {
   <p class="mt-8 text-xs text-gray-100">
       © 2024 Tavara Tours & Travels
     </p>
-    <p class="mt-8 text-xs text-gray-100">
-      Designed and Built by janibit.com
-    </p>
+    <a href='https://janibit.com' class="mt-8 text-xs text-gray-100">
+      Powered by janibit.com
+    </a>
   </div>
   </div>
 </footer>

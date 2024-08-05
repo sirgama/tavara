@@ -1,6 +1,6 @@
 import AboutHero from '@/components/sections/About/AboutHero'
+import Footer from '@/components/sections/Footer/Footer'
 import NavigationBar from '@/components/sections/NavigationBar'
-import { Footer } from 'flowbite-react'
 import Head from 'next/head'
 import React from 'react'
 
