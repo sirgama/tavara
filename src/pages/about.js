@@ -1,4 +1,5 @@
 import AboutHero from '@/components/sections/About/AboutHero'
+import AboutSection from '@/components/sections/About/AboutSection'
 import Footer from '@/components/sections/Footer/Footer'
 import NavigationBar from '@/components/sections/NavigationBar'
 import Head from 'next/head'
@@ -16,6 +17,7 @@ const contact = () => {
     <body>
       <NavigationBar />
       <AboutHero />
+      <AboutSection />
       <Footer />
     </body>
   </main>
