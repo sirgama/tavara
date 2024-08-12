@@ -134,7 +134,7 @@ const AboutCard = () => {
                 </li>{" "}
               </p>
 
-              <h4 className="font-semibold lg:leading-normal leading-normal text-xl lg:text-2xl mt-4 mb-5">
+              <h4 className="font-semibold lg:leading-normal leading-normal text-xl lg:text-2xl mt-8 md:mt-20 mb-5">
                 {" "}
                 <RoughNotation
                   type="highlight"

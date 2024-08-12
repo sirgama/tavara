@@ -1,4 +1,6 @@
+import ContactCard from '@/components/sections/Contact/ContactCard'
 import ContactHero from '@/components/sections/Contact/ContactHero'
+import ContactList from '@/components/sections/Contact/ContactList'
 import Footer from '@/components/sections/Footer/Footer'
 import NavigationBar from '@/components/sections/NavigationBar'
 import Head from 'next/head'
@@ -16,6 +18,8 @@ const contact = () => {
     <body>
       <NavigationBar />
       <ContactHero />
+      <ContactList />
+      <ContactCard />
       <Footer />
     </body>
   </main>
