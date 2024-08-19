@@ -24,7 +24,7 @@ const Aboutus = () => {
                     Tavara Tours offers top quality of service and we leave nothing to chance ensuring that clients have a great time and memorable experience of their life time holidays.
                     </p>
 
-                   <div className="my-10 "> <a href="#" className="bg-red-500 hover:bg-red-600 text-white text-center md:text-left font-bold py-3 px-10 my-5 md:my-10">Learn More</a></div>
+                   <div className="my-10 "> <Link  href="/destinations" className="bg-red-500 hover:bg-red-600 text-white text-center md:text-left font-bold py-3 px-10 my-5 md:my-10">Explore Destinations</Link></div>
                                         
                                         
                 </div>
