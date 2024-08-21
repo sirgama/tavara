@@ -90,15 +90,9 @@ const AboutCard = () => {
             <div className="lg:col-span-7 mx-auto">
               <h4 className="font-semibold lg:leading-normal leading-normal text-4xl lg:text-5xl mt-2 mb-5">
                 {" "}
-                <RoughNotation
-                  type=" "
-                  animationDelay={2700}
-                  color="blue"
-                  animationDuration={2200}
-                  show={true}
-                >
+            
                   <span className="text-pink-700">What Sets</span>{" "}
-                </RoughNotation>{" "}
+              {" "}
                 Us Apart{" "}
               </h4>
 
@@ -136,15 +130,9 @@ const AboutCard = () => {
 
               <h4 className="font-semibold lg:leading-normal leading-normal text-xl lg:text-2xl mt-8 md:mt-20 mb-5">
                 {" "}
-                <RoughNotation
-                  type="highlight"
-                  animationDelay={7700}
-                  color="yellow"
-                  animationDuration={4200}
-                  show={true}
-                >
+           
                   <span className="text-purple-700">Join Us on a Journey</span>{" "}
-                </RoughNotation>{" "}
+              {" "}
               </h4>
 
               <p className="text-gray-700 text-lg max-w-xl">

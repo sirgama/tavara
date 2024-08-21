@@ -14,9 +14,9 @@ const Aboutus = () => {
                 <div className="lg:col-span-5 mx-auto">
                    
 
-                    <h4 className="font-semibold lg:leading-normal leading-normal text-center md:text-left text-lg lg:text-lg mt-2 mb-5 ">  <RoughNotation type=" " animationDelay={2700} color='blue' animationDuration={2200}  show={true}><span className="text-red-700">About Tavara</span> </RoughNotation>   </h4>
+                    <h4 className="font-semibold lg:leading-normal leading-normal text-center md:text-left text-lg lg:text-lg mt-2 mb-5 ">   <span className="text-red-700">About Tavara</span>   </h4>
 
-                    <h4 className="font-semibold lg:leading-normal leading-normal text-center md:text-left text-3xl lg:text-6xl mt-4 mb-5 text-red-700"><RoughNotation type="highlight" animationDelay={7700} color='yellow' animationDuration={4200}  show={true}><span className="text-red-700">Unlimited </span> </RoughNotation>   <RoughNotation type="circle" animationDelay={7700} color='red' animationDuration={4200}  show={true}><span className="text-red-700"> Travel </span> </RoughNotation> and Holiday  <RoughNotation type="box" animationDelay={7700} color='blue' animationDuration={4200}  show={true}><span className="text-red-700">Deals</span> </RoughNotation>   </h4>
+                    <h4 className="font-semibold lg:leading-normal leading-normal text-center md:text-left text-3xl lg:text-6xl mt-4 mb-5 text-red-700"> <span className="text-red-700">Unlimited </span>  <span className="text-red-700"> Travel </span> and Holiday   <span className="text-red-700">Deals</span>   </h4>
             
                     <p className="text-gray-700 text-lg max-w-xl">
                     Tavara Tours & Travel Strives to deliver exceptional service to all its clients. By adding a personal touch to our products, we ensure that your time spent with us is comfortable and memorable. We are a reliable partner and a very flexible holiday organizer for both Safaris & Beach Holiday packages. We do organize accommodation, flights/ferry tickets and all tours and ground transfers.

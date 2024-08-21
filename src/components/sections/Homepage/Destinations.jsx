@@ -13,15 +13,9 @@ const Destinations = () => {
         </div>
         <div className="text-center leading-loose ">
           <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl py-2">
-            <RoughNotation
-              type="highlight"
-              animationDelay={5700}
-              color="yellow"
-              animationDuration={1200}
-              show={true}
-            >
+       
               <span className="text-red-700">Popular</span>{" "}
-            </RoughNotation>{" "}
+           {" "}
             Destinations
           </h1>
 
