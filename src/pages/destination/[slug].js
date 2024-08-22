@@ -8,7 +8,7 @@ import React from 'react'
 const destination = () => {
   return (
     <div>
-        <NavigationBar />
+     <div className='block sm:hidden'>   <NavigationBar /></div>
         {/* <DestinationHero /> */}
         {/* <DestinationHighlights /> */}
         <DestinationData />
