@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React, { useState, useEffect } from 'react'
 
-const DestinationImages = () => {
+const PackageImages = () => {
   const images = [
     "https://images.pexels.com/photos/12004884/pexels-photo-12004884.jpeg?auto=compress&cs=tinysrgb&w=600",
     "https://images.pexels.com/photos/11235470/pexels-photo-11235470.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -35,12 +35,12 @@ const DestinationImages = () => {
   )
 }
 
-export default DestinationImages
+export default PackageImages
 
 // import Image from 'next/image'
 // import React, { useState, useEffect } from 'react'
 
-// const DestinationImages = () => {
+// const PackageImages = () => {
 //   const images = [
 //     "https://images.pexels.com/photos/12004884/pexels-photo-12004884.jpeg?auto=compress&cs=tinysrgb&w=600",
 //     "https://images.pexels.com/photos/11235470/pexels-photo-11235470.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -92,4 +92,4 @@ export default DestinationImages
 //   )
 // }
 
-// export default DestinationImages
+// export default PackageImages

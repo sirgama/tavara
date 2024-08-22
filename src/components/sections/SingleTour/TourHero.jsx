@@ -21,7 +21,7 @@ const TourHero = () => {
                 Home {` `} {`>`}
               </Link>
               <Link href="/" class="text-md font-medium mb-6">
-                {` `} Tours{" "}
+                {` `} Tour{" "}
               </Link>
             </div>
           </div>

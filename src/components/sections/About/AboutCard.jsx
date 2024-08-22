@@ -1,8 +1,10 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import Image from "next/image";
 import python from "/public/python.png";
 import hiraffe from "/public/hiraffe.jpg";
 import { RoughNotation } from "react-rough-notation";
+import Link from "next/link";
 
 const AboutCard = () => {
   return (
@@ -13,15 +15,10 @@ const AboutCard = () => {
             <div className="lg:col-span-7 mx-auto">
               <h4 className="font-semibold lg:leading-normal leading-normal text-4xl lg:text-5xl mt-2 mb-5">
                 {" "}
-                <RoughNotation
-                  type="box"
-                  animationDelay={2700}
-                  color="blue"
-                  animationDuration={2200}
-                  show={true}
-                >
+                
+             
                   <span className="text-pink-700">Our</span>{" "}
-                </RoughNotation>{" "}
+              
                 Story{" "}
               </h4>
 
@@ -35,32 +32,17 @@ const AboutCard = () => {
 
               <h4 className="font-semibold lg:leading-normal leading-normal text-xl lg:text-2xl mt-4 mb-5">
                 {" "}
-                <RoughNotation
-                  type="circle"
-                  animationDelay={2700}
-                  color="pink"
-                  animationDuration={4200}
-                  show={true}
-                >
-                  <span className="text-blue-700">Our Mission</span>{" "}
-                </RoughNotation>{" "}
+              
+                  <span className="text-blue-700">Discover Kenya with Confidence</span>{" "}
+              
               </h4>
 
-              <p className="text-gray-700 text-lg max-w-xl">
-                At Tavara Tours and Travels, our mission is to create
-                unforgettable journeys that connect travelers with the heart and
-                soul of Kenya. We strive to:
-                <li>
-                  {" "}
-                  Showcase Kenya's diverse landscapes, from pristine beaches to
-                  majestic savannas
-                </li>
-                <li> Promote sustainable and responsible tourism practices</li>
-                <li>Support local communities and conservation efforts</li>
-                <li>
-                  Provide personalized, high-quality service to every client
-                </li>
+              <p className="text-gray-700 text-lg max-w-xl mb-10">
+              When you choose Tavara Tours and Travel, you’re not just booking a trip—you’re partnering with a company that values your safety, satisfaction, and the sustainability
+of the destinations we explore. We are dedicated to making your journey through Kenya an extraordinary and worry-free experience. Trust us to handle every detail,
+so you can focus on enjoying the adventure of a lifetime.
               </p>
+              <Link href="/destinations" className="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-10 my-10">View Destinations</Link>
             </div>
 
             <div className="lg:col-span-5">
@@ -91,57 +73,32 @@ const AboutCard = () => {
               <h4 className="font-semibold lg:leading-normal leading-normal text-4xl lg:text-5xl mt-2 mb-5">
                 {" "}
             
-                  <span className="text-pink-700">What Sets</span>{" "}
+                  <span className="text-pink-700">Core</span>{" "}
               {" "}
-                Us Apart{" "}
+                Message{" "}
               </h4>
 
               <p className="text-gray-700 text-lg max-w-xl">
-                <li>
-                  {" "}
-                  Local Expertise: Our team of experienced guides are all proud
-                  Kenyans with in-depth knowledge of the country's history,
-                  culture, and hidden gems.
-                </li>
-                <li>
-                  Tailored Experiences: We understand that every traveler is
-                  unique. That's why we offer customized itineraries to suit
-                  your interests, budget, and time constraints.
-                </li>
-                <li>
-                  {" "}
-                  Commitment to Sustainability: We're dedicated to preserving
-                  Kenya's natural beauty for future generations. Our tours
-                  emphasize eco-friendly practices and support conservation
-                  initiatives.
-                </li>
-                <li>
-                  Diverse Offerings: From wildlife safaris in the Masai Mara to
-                  cultural experiences in vibrant Nairobi, we offer a wide range
-                  of tours to satisfy every type of traveler.
-                </li>
-                <li>
-                  {" "}
-                  Customer Satisfaction: Our commitment to excellence is
-                  reflected in our high rate of repeat customers and glowing
-                  testimonials.
-                </li>{" "}
+              At Tavara Tours and Travel, we believe that travel is more than just a journey — it's an opportunity to create lasting memories, discover hidden gems, 
+and experience the true beauty of Kenya. Our core ethos is rooted in delivering personalized, safe, and unforgettable travel experiences that exceed your expectations. Whether you’re exploring the wild savannas, immersing yourself in local cultures, or unwinding on pristine beaches, we are dedicated to ensuring that your adventure is as seamless and enjoyable as possible.
+
               </p>
 
               <h4 className="font-semibold lg:leading-normal leading-normal text-xl lg:text-2xl mt-8 md:mt-20 mb-5">
                 {" "}
            
-                  <span className="text-purple-700">Join Us on a Journey</span>{" "}
+                  <span className="text-purple-700">Our Ethos</span>{" "}
               {" "}
               </h4>
 
-              <p className="text-gray-700 text-lg max-w-xl">
-                Whether you're a first-time visitor to Kenya or a local looking
-                to explore more of your beautiful country, Tavara Tours and
-                Travels is here to make your dreams a reality. Let us show you
-                the magic of Kenya through our eyes. Contact us today to start
-                planning your next adventure!
+              <p className="text-gray-700 text-lg max-w-xl mb-10">
+              We understand that your travel experience should be as unique as you are. That’s why we take great care in crafting customized journeys that are far from the typical 
+tourist routes. We seek out hidden treasures and off-the-beaten-path destinations, ensuring that every trip with Tavara Tours and Travel is a one-of-a-kind adventure.
+
+At the heart of our company is a commitment to responsible tourism. We partner with local communities and conservationists who share our vision of sustainable travel,
+ensuring that our tours not only delight our clients but also benefit the environment and the people of Kenya.
               </p>
+              <Link href="/tours" className="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-10 my-10">Explore Tours</Link>
             </div>
           </div>
         </div>

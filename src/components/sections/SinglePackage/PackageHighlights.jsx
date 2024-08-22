@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TourHighlights = () => {
+const PackageHighlights = () => {
   return (
     <div>
                 <div className="mx-auto max-w-2xl text-center my-8 md:my-8">
@@ -122,4 +122,4 @@ const TourHighlights = () => {
   )
 }
 
-export default TourHighlights
+export default PackageHighlights

@@ -1,6 +1,8 @@
 import React from 'react'
 import { Button } from "@/components/ui/button"
 import {  ChevronLeftIcon } from "@radix-ui/react-icons"
+import { useRouter } from 'next/router';
+
 import Link from 'next/link'
 import {
     Dialog,
@@ -14,20 +16,28 @@ import BookingForm from '../Forms/BookingForm'
 
 
 const SimpleNavigation = () => {
+
+    const router = useRouter();
+
+    const goBack = () => {
+      router.back();
+    };
+
+
   return (
     <div className=' w-full hidden sm:flex flex-row justify-between px-5 my-2 sticky'>
 
         <div className="py-6">
-            <Link href="/courses" className="text-sm font-semibold leading-6 bg-red-500 text-white px-12 py-4  transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-red-700 ">
+            <button onClick={goBack} className="text-sm font-semibold leading-6 bg-red-500 text-white px-12 py-4  transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-red-700 ">
          <button
             type="button"
             className="-m-3.5 rounded-md p-2.5 text-white"
-            onClick={() => setMobileMenuOpen(false)}
+            onClick={goBack}
           ><span className='p-4' aria-hidden="true">&larr;</span> 
             Go Back
          
           </button> 
-        </Link>
+        </button>
             </div>
 
 
