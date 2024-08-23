@@ -3,12 +3,12 @@ import React from 'react'
 const DestinationHighlights = () => {
   return (
     <div>
-                <div className="mx-auto max-w-2xl text-center my-8 md:my-8">
-                        <h2 className="text-2xl font-bold tracking-tight text-red-900 underline underline-offset-8 sm:text-4xl mb-10">Maasai Mara, Kenya</h2>                </div>
+                <div className="mx-auto max-w-3xl text-center my-8 md:my-8">
+                        <h2 className="text-2xl font-bold tracking-tight text-red-900 underline underline-offset-8 sm:text-4xl mb-10   ">Maasai Mara, Kenya</h2>                </div>
                 
         <div class="flex w-full items-stretch  justify-evenly">
             
-    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
+    {/* <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
     
         <div class="relative bg-white py-3 px-3 rounded-2xl w-auto h-auto my-4 shadow-md">
             <div class=" text-white flex items-center absolute rounded-full py-4 px-4 shadow-xl bg-pink-500 left-4 -top-6">
@@ -18,13 +18,13 @@ const DestinationHighlights = () => {
 </svg>
             </div>
             <div class="mt-6">
-                <p class="text-lg md:text-sm sm:text-md lg:text-lg font-semibold my-2">Duration</p>
+                <p class="text-lg md:text-sm sm:text-md lg:text-lg font-semibold my-2">Location</p>
         
                  <div class="border-t-2"></div>
 
                 <div class="flex justify-between">
                     <div class="my-2">
-                        <p class="font-semibold text-base mb-2">1 Day</p>
+                        <p class="font-semibold text-base mb-2">Kenya</p>
                     
                     </div>
                 
@@ -116,7 +116,7 @@ const DestinationHighlights = () => {
       
 
 
-    </div>
+    </div> */}
 </div>
     </div>
   )

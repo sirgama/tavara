@@ -12,6 +12,9 @@ import {
 import SimpleNavigation from './SimpleNavigation';
 import DestinationHighlights from './DestinationHighlights';
 import BookingForm from '../Forms/BookingForm';
+import { useRouter } from 'next/router';
+import DestinationCards from '../Homepage/DestinationCards';
+import Safaricard from '../Homepage/Safaricard';
 
 
 const DestinationData = () => {
@@ -20,11 +23,16 @@ const DestinationData = () => {
 
   const sections = [
     { title: 'Overview', content: 'Content for section 1...Content for section 1...Content for section 1...Content for section 1...Content for section 1...Content for section 1...Content for section 1...Content for section 1...Content for section 1...Content for section 1...Content for section 1...Content for section 1...Content for section 1...Content for section 1...Content for section 1...Content for section 1...Content for section 1...Content for section 1...Content for section 1...Content for section 1...Content for section 1...' },
-    { title: 'Whats Included', content: 'Content for section 2...' },
-    { title: 'Excluded', content: 'Content for section 3...' },
-    { title: 'Itenerary', content: 'Content for section 3...' },
+   
     // Add more sections as needed
   ];
+
+  const router = useRouter();
+
+    const goBack = () => {
+      router.back();
+    };
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -56,34 +64,39 @@ const DestinationData = () => {
         {/* <div className=' lg:col-span-6 mx-auto h-full sm:h-screen  overflow-y-scroll ml-1/3 relative '> */}
             {/* <DestinationContent /> */}
             <div className="w-full ml-auto overflow-y-auto lg:col-span-6 mx-auto h-full sm:h-screen relative">
-            <div className="sticky top-0 py-4 z-10"><SimpleNavigation /></div>
+            <div className="sticky top-0 py-4 z-10">  <div className="py-6">
+            <button onClick={goBack} className="text-sm font-semibold leading-6 bg-red-500 text-white px-12 py-4  transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-red-700 ">
+         <button
+            type="button"
+            className="-m-3.5 rounded-md p-2.5 text-white"
+            onClick={goBack}
+          ><span className='p-4' aria-hidden="true">&larr;</span> 
+            Go Back
+         
+          </button> 
+        </button>
+            </div></div>
             <DestinationHighlights />
         {sections.map((section, index) => (
           <div key={index} ref={(el) => (sectionRefs.current[index] = el)} className="mb-8">
-            <h2 className={`text-3xl text-center font-bold py-8 bg-white sticky top-20 ${index === activeSection ? 'text-blue-600' : ''}`}>
+            <h2 className={`text-3xl text-center font-bold py-8 bg-white sticky top-20 ${index === activeSection ? 'text-red-700' : ''}`}>
               {section.title}
             </h2>
             <p className="mt-4 mx-10">{section.content}</p>
         
           </div>
-        ))}   <div className="py-6">
-         <Dialog>
-           <DialogTrigger> <button
-           
-           className="m-5 w-full text-center  p-2.5 text-white text-sm font-semibold leading-6 bg-red-500  px-10 py-4  transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-red-700 "
-           
-         >Book this Option
-</button> </DialogTrigger>
+        ))}   
+        <h2 className="text-2xl font-bold tracking-tight text-red-700  sm:text-3xl mb-10  text-center ">Packages Available Here</h2> 
+
+<div className="mt-5 max-sm:mt-5 max-md:mt-5 w-full max-md:w-full max-sm:w-full max-md:mx-auto max-sm:mx-auto max-w-screen mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-8 items-center justify-center">
   
-  <DialogContent>
-    <DialogHeader>
-      <DialogDescription>
-       <BookingForm />
-      </DialogDescription>
-    </DialogHeader>
-  </DialogContent>
-</Dialog>
-        </div>
+        <Safaricard />
+        <Safaricard />
+        <Safaricard />
+        <Safaricard />
+      </div>
+
+
       </div>
      
         {/* </div> */}
