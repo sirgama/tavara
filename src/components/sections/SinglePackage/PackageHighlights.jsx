@@ -1,10 +1,10 @@
 import React from 'react'
 
-const PackageHighlights = () => {
+const PackageHighlights = ({ contentData }) => {
   return (
     <div>
                 <div className="mx-auto max-w-2xl text-center my-8 md:my-8">
-                        <h2 className="text-2xl font-bold tracking-tight text-red-900 underline underline-offset-8 sm:text-4xl mb-10">Maasai Mara, Kenya</h2>                </div>
+                        <h2 className="text-2xl font-bold tracking-tight text-red-900 underline underline-offset-8 sm:text-4xl mb-20">{contentData?.name}</h2>                </div>
                 
         <div class="flex w-full items-stretch  justify-evenly">
             
@@ -24,7 +24,7 @@ const PackageHighlights = () => {
 
                 <div class="flex justify-between">
                     <div class="my-2">
-                        <p class="font-semibold text-base mb-2">1 Day</p>
+                        <p class="font-semibold text-base mb-2">{contentData.days} Days / {contentData.nights} Nights</p>
                     
                     </div>
                 
@@ -80,7 +80,7 @@ const PackageHighlights = () => {
 
                 <div class="flex justify-between">
                     <div class="my-2">
-                        <p class="font-semibold text-base mb-2">Kes 3,000 PPS</p>
+                        <p class="font-semibold text-base mb-2">Kes {contentData.cost} PPS</p>
                     
                     </div>
                 

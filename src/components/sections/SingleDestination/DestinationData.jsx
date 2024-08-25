@@ -7,6 +7,7 @@ import Safaricard from '../Homepage/Safaricard';
 import { getDestinationById } from '@/lib/getDestinationById';
 import DestinationContent from './DestinationContent';
 import TourCard from '../Homepage/TourCard';
+import PackageCard from '../Homepage/PackageCard';
 
 
 const DestinationData = () => {
@@ -21,7 +22,7 @@ const DestinationData = () => {
   const [destination, setDestination] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
+console.log(destination)
   useEffect(() => {
     const fetchDestination = async () => {
       if (router.isReady) {
@@ -102,7 +103,7 @@ console.log(destination)
             <DestinationHighlights destination={destination}  />
         {sections.map((section, index) => (
           <div key={index} ref={(el) => (sectionRefs.current[index] = el)} className="mb-8">
-            <h2 className={`text-3xl text-center font-bold py-8 bg-white sticky top-20 ${index === activeSection ? 'text-red-700' : ''}`}>
+            <h2 className={`text-3xl text-center font-bold py-8 sticky top-20 ${index === activeSection ? 'text-red-700' : ''}`}>
               {section.title}
             </h2>
             <p className="mt-4 mx-10">{section.content}</p>
@@ -113,7 +114,7 @@ console.log(destination)
 
 <div className="mt-5 max-sm:mt-5 max-md:mt-5 w-full max-md:w-full max-sm:w-full max-md:mx-auto max-sm:mx-auto max-w-screen mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 md:gap-8 items-center justify-center">
   
-        <Safaricard destination={destination?.packages}/>
+        <PackageCard destination={destination?.packages}/>
    
 
         

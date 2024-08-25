@@ -58,7 +58,7 @@ const TourData = () => {
     { title: 'Overview', content: <TourContent contentData={tour?.description} /> },
     { title: 'Whats Included', content: <Inclusions tour={tour?.included} /> },
     { title: 'Excluded', content: <Exclusions tour={tour?.excluded} /> },
-    { title: 'Itenerary', content: <ItineraryList tour={tour?.itinerary} /> },
+    { title: 'Itinerary', content: <ItineraryList tour={tour?.itinerary} /> },
     // Add more sections as needed
   ];
 
@@ -104,7 +104,7 @@ const TourData = () => {
             <TourHighlights contentData={tour} />
         {sections.map((section, index) => (
           <div key={index} ref={(el) => (sectionRefs.current[index] = el)} className="mb-8">
-            <h2 className={`text-3xl text-center text-red-900 font-bold py-8 bg-white sticky top-20 ${index === activeSection ? 'text-red-900' : ''}`}>
+            <h2 className={`text-3xl text-center text-red-900 font-bold py-8 underline underline-offset-8 sticky top-10 ${index === activeSection ? 'text-red-900' : ''}`}>
               {section.title}
             </h2>
             <p className="mt-4 mx-10">{section.content}</p>

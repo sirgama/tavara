@@ -10,7 +10,7 @@ const DestinationCards = ({destinationsdata} ) => {
     <>
     {destinationsdata.map(destination => (
       <div key={destination.id}>
-      <div class="relative grid h-[30rem] w-full max-w-[24rem] flex-col items-end justify-center overflow-hidden bg-indigo-500 shadow-lg shadow-indigo-500/50 bg-clip-border text-center text-gray-700 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+      <div class="relative grid h-[30rem] w-full max-w-[24rem] flex-col items-end justify-center overflow-hidden bg-indigo-500 shadow-lg shadow-indigo-500/50 bg-clip-border text-center text-gray-700 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-30 mb-20">
       <div
   className={`absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent bg-cover bg-clip-border bg-center text-gray-700 shadow-none`}
   style={{

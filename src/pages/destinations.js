@@ -37,6 +37,7 @@ export default function destinations() {
       <div>
         <NavigationBar />
         <DestinationsHero />
+      
         <AllDestinations apiData={apiData} />
         <Footer />
       </div>

@@ -4,7 +4,7 @@ const TourHighlights = ({ contentData }) => {
   return (
     <div>
                 <div className="mx-auto max-w-2xl text-center my-8 md:my-8">
-                        <h2 className="text-2xl font-bold tracking-tight text-red-900 underline underline-offset-8 sm:text-4xl mb-10">{contentData?.name}</h2>                </div>
+                        <h2 className="text-2xl font-bold tracking-tight text-red-900 underline underline-offset-8 sm:text-4xl mb-20">{contentData?.name}</h2>                </div>
                 
         <div class="flex w-full items-stretch  justify-evenly">
             

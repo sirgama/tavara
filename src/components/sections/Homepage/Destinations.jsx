@@ -60,7 +60,7 @@ const Destinations = ({apiData}) => {
 
           <p className="mt-6 text-lg leading-8 text-gray-600">
             Step into a world of breathtaking landscapes, encounter exotic
-            wildlife, and embrace the thrill of the untamed wilderness.
+            wildlife, and embrace the thrill of Kenya's Beauty.
           </p>
         </div>
       </div>

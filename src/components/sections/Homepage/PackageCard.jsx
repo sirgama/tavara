@@ -1,22 +1,45 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { getPackageById } from '@/lib/getPackageById'
 
-const TourCard = ({tourData}) => {
+const PackageCard = ({destination}) => {
+    const [packageDetails, setPackageDetails] = useState([]);
 
-
-
-
+    useEffect(() => {
+        // Function to fetch package details by IDs
+        const fetchPackageDetails = async () => {
+          // Create an array to hold promises
+          const promises = destination.map(async (pkg) => {
+            if (pkg.id) {
+              // Fetch full package details using the ID
+              const fullDetails = await getPackageById(pkg.id);
+              return fullDetails;
+            }
+            return null;
+          });
+    
+          // Wait for all promises to resolve
+          const results = await Promise.all(promises);
+    
+          // Filter out null results and set the package details in state
+          setPackageDetails(results.filter(result => result !== null));
+        };
+    
+        fetchPackageDetails();
+      }, [destination]);
+    
+console.log(packageDetails)
 
   return (
   
  <>
-    {tourData.map(tour => (
+    {packageDetails.map(tour => (
         <div key = {tour.id}>
         <div class="relative flex w-full max-w-[26rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg transition ease-in-out delay-150  hover:scale-110 mb-20 ">
      <div class="relative mx-4 mt-4 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 max-h-36">
        <img
-        src={tour.tourMainImage} alt={tour.tourName} 
+        src={tour.mainImage} alt={tour.name} 
        />
        <div class="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60"></div>
        <button
@@ -41,7 +64,7 @@ const TourCard = ({tourData}) => {
      <div class="mb-3 flex items-center justify-between ">
          <div>
          <button class="cursor-pointer font-medium overflow-hidden relative z-100 border border-green-500 group px-4 py-1">
-         <span class="relative z-10 text-green-500 group-hover:text-white text-sm duration-500">{tour.days} Days</span>
+         <span class="relative z-10 text-green-500 group-hover:text-white text-sm duration-500">{tour.days} Days / {tour.nights} Nights</span>
          <span class="absolute w-full h-full bg-green-500 -left-32 top-0 -rotate-45 group-hover:rotate-0 group-hover:left-0 duration-500"></span>
          <span class="absolute w-full h-full bg-green-500 -right-32 top-0 -rotate-45 group-hover:rotate-0 group-hover:right-0 duration-500"></span>
          </button>
@@ -65,12 +88,12 @@ const TourCard = ({tourData}) => {
        </div>
        <div class="mb-3 w-full font-extrabold flex items-start justify-start justify-items-start text-start">
          <h5 class="block  text-xl font-extrabold leading-snug tracking-normal text-blue-gray-900 antialiased">
-         {tour.tourName}
+         {tour.name}
          </h5>
        
        </div>
        <p class="block  text-lg font-light leading-relaxed text-start text-gray-900 antialiased">
-       <span className='font-bold'>Cost:</span> Kshs {tour.tourCost} {' '} PPS
+       <span className='font-bold'>Cost:</span> Kshs {tour.cost} {' '} PPS
        </p>
        <p class="block mt-4 text-base font-light leading-relaxed text-start text-gray-700 antialiased">
        <span className='font-bold'>Availability: </span> On Request
@@ -78,7 +101,7 @@ const TourCard = ({tourData}) => {
       
      </div>
      <div class="p-6 pt-3">
-       <Link href={`/tour/${tour.id}`}
+       <Link href={`/package/${tour.id}`}
          class="block w-full select-none  bg-white py-3.5 px-7 text-center align-middle  text-sm font-bold uppercase text-red-500 border-2 border-red-500 shadow-md shadow-red-500/20 transition-all hover:shadow-lg hover:shadow-red-500/40 hover:bg-red-500 hover:text-white focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
          type="button"
          data-ripple-light="true"
@@ -97,4 +120,4 @@ const TourCard = ({tourData}) => {
   )
 }
 
-export default TourCard
+export default PackageCard
