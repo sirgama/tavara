@@ -5,7 +5,8 @@ import { useState } from 'react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Field, Label, Switch } from '@headlessui/react'
 
-export default function BookingForm() {
+export default function BookingForm({tour}) {
+    console.log(tour)
   const [agreed, setAgreed] = useState(false)
 
   return (
@@ -23,9 +24,9 @@ export default function BookingForm() {
         />
       </div>
       <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Maasai Mara, Kenya</h2>
+        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Tour Booking Form </h2>
         <p className="mt-2 text-lg leading-8 text-gray-600">
-         You will be contacted by our staff after successfully booking for the next steps
+         You will be contacted shortly by our support team after successfully booking for the next steps
         </p>
       </div>
       <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
@@ -85,16 +86,25 @@ export default function BookingForm() {
                 <select
                   id="country"
                   name="country"
-                  className="h-full rounded-md border-0 bg-transparent bg-none py-0 pl-4 pr-9 text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
+                  className="h-full rounded-md border-0 bg-transparent bg-none py-0 pl-4 pr-0 text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
                 >
                   <option>US</option>
                   <option>CA</option>
                   <option>EU</option>
+                  <option>KE</option>
+                  <option>UG</option>
+                  <option>TZ</option>
+                  <option>RW</option>
+                  <option>SA</option>
+                  <option>AU</option>
+                  <option>FR</option>
+                  <option>UK</option>
+                  <option>Others</option>
                 </select>
-                <ChevronDownIcon
+                {/* <ChevronDownIcon
                   aria-hidden="true"
                   className="pointer-events-none absolute right-3 top-0 h-full w-5 text-gray-400"
-                />
+                /> */}
               </div>
               <input
                 id="phone-number"
@@ -107,7 +117,7 @@ export default function BookingForm() {
 
             <div className="sm:col-span-2">
             <label htmlFor="company" className="block text-sm font-semibold leading-6 text-gray-900">
-              Service you're looking for
+              Type in the Tour you're requesting
             </label>
             <div className="mt-2.5">
               <input

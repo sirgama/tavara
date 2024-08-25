@@ -1,17 +1,52 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
 
 import Safaricard from '../Homepage/Safaricard'
+import TourCard from '../Homepage/TourCard';
 
-const AllTours = () => {
-    const destinations = [
-        { name: 'Canada', image: '/canada.jpg', reviews: 0, tours: 0 },
-        { name: 'Egypt', image: '/egypt.jpg', reviews: 0, tours: 0 },
-        { name: 'China', image: '/china.jpg', reviews: 0, tours: 0 },
-        { name: 'Dubai', image: '/dubai.jpg', reviews: 0, tours: 1 },
-        { name: 'Tanzania', image: '/tanzania.jpg', reviews: 0, tours: 3 },
-        { name: 'Kenya', image: '/kenya.jpg', reviews: 0, tours: 16 },
-      ]
+const AllTours = ({apiData}) => {
+
+  const [tourData, setTourData] = useState([]);
+
+
+  useEffect(() => {
+    const video = document.getElementById('autoplay-video');
+    if (video) {
+      video.play()
+    }
+  }, [])
+
+  useEffect(() => {
+    const extractTourData = () => {
+      const tours = [];
+
+      apiData.forEach(item => {
+        if (item && item.sys && item.sys.contentType && item.sys.contentType.sys.id === 'tours') {
+          const { fields } = item;
+          tours.push({
+            id: item.sys.id,
+            tourName: fields.tourName,
+            tourDescription: fields.tourDescription,
+            tourMainImage: fields.tourMainImage?.fields?.file?.url,
+            tourImages: fields.tourImages?.map(img => img.fields.file.url),
+            tourCost: fields.tourCost,
+            tourGuide: fields.tourGuide,
+            days: fields.days,
+            included: fields.included,
+            excluded: fields.excluded,
+            itinerary: fields.itinerary
+          });
+        }
+      });
+
+      setTourData(tours);
+    };
+
+    if (apiData) {
+      extractTourData();
+    }
+  }, [apiData]);
+ 
   return (
     <div >
       <Head>
@@ -43,14 +78,7 @@ const AllTours = () => {
 
             <div className='mt-5 max-sm:mt-5 max-md:mt-5   max-w-screen-2xl max-md:w-full max-sm:w-full max-md:mx-auto max-sm:mx-auto max-w-screen mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-8 items-center justify-center' >
               
-                    <Safaricard />
-                    <Safaricard />
-                    <Safaricard />
-                    <Safaricard />
-                    <Safaricard />
-                    <Safaricard />
-                    <Safaricard />
-                    <Safaricard />
+            <TourCard tourData = {tourData} />
 
                   
              

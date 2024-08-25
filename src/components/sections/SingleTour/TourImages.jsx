@@ -1,22 +1,15 @@
 import Image from 'next/image'
 import React, { useState, useEffect } from 'react'
 
-const TourImages = () => {
-  const images = [
-    "https://images.pexels.com/photos/12004884/pexels-photo-12004884.jpeg?auto=compress&cs=tinysrgb&w=600",
-    "https://images.pexels.com/photos/11235470/pexels-photo-11235470.jpeg?auto=compress&cs=tinysrgb&w=600",
-    "https://images.pexels.com/photos/26841267/pexels-photo-26841267/free-photo-of-two-zebras-grazing-in-a-field.jpeg?auto=compress&cs=tinysrgb&w=600",
-    "https://images.pexels.com/photos/7637398/pexels-photo-7637398.jpeg?auto=compress&cs=tinysrgb&w=600",
-    "https://images.pexels.com/photos/27544270/pexels-photo-27544270/free-photo-of-olympus-digital-camera.jpeg?auto=compress&cs=tinysrgb&w=600",
+const TourImages = ({tour}) => {
+  
 
-  ]
-
-  const [currentImage, setCurrentImage] = useState(images[0])
+  const [currentImage, setCurrentImage] = useState(tour[0])
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      const randomIndex = Math.floor(Math.random() * images.length)
-      setCurrentImage(images[randomIndex])
+      const randomIndex = Math.floor(Math.random() * tour.length)
+      setCurrentImage(tour[randomIndex])
     }, 3000)
 
     return () => clearInterval(intervalId)
@@ -25,7 +18,7 @@ const TourImages = () => {
   return (
     <div className='relative md:h-screen'>
       <Image
-        src={currentImage}
+        src={`https:${currentImage}`}
         height={1000}
         width={1000}
         alt="Destination image"

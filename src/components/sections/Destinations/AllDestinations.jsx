@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from '../../../styles/destinationStyles.module.css'
 import Head from 'next/head'
 import Image from 'next/image'
@@ -7,15 +7,43 @@ import DestinationsHero from './DestinationsHero'
 import { RoughNotation } from 'react-rough-notation'
 import DestinationCards from '../Homepage/DestinationCards'
 
-const AllDestinations = () => {
-    const destinations = [
-        { name: 'Canada', image: '/canada.jpg', reviews: 0, tours: 0 },
-        { name: 'Egypt', image: '/egypt.jpg', reviews: 0, tours: 0 },
-        { name: 'China', image: '/china.jpg', reviews: 0, tours: 0 },
-        { name: 'Dubai', image: '/dubai.jpg', reviews: 0, tours: 1 },
-        { name: 'Tanzania', image: '/tanzania.jpg', reviews: 0, tours: 3 },
-        { name: 'Kenya', image: '/kenya.jpg', reviews: 0, tours: 16 },
-      ]
+const AllDestinations = ({apiData}) => {
+  const [destinationsdata, setDestinations] = useState([]);
+
+
+  useEffect(() => {
+    const video = document.getElementById('autoplay-video');
+    if (video) {
+      video.play()
+    }
+  }, [])
+
+  useEffect(() => {
+    const extractTourData = () => {
+      const tours = [];
+
+      apiData.forEach(item => {
+        if (item && item.sys && item.sys.contentType && item.sys.contentType.sys.id === 'travelDestination') {
+          const { fields } = item;
+          tours.push({
+            id: item.sys.id,
+            name: fields.name,
+            description: fields.description,
+            destinationMainImage: fields.destinationMainImage?.fields?.file?.url,
+          });
+        }
+      });
+
+      setDestinations(tours);
+    };
+
+    if (apiData) {
+      extractTourData();
+    }
+  }, [apiData]);
+  
+
+  console.log(destinationsdata)
   return (
     <div >
       <Head>
@@ -47,16 +75,7 @@ const AllDestinations = () => {
 
             <div className='mt-5 max-sm:mt-5 max-md:mt-5   max-w-screen-2xl max-md:w-full max-sm:w-full max-md:mx-auto max-sm:mx-auto max-w-screen mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-8 items-center justify-center' >
               
-                    <DestinationCards />
-                    <DestinationCards />
-                    <DestinationCards />
-                    <DestinationCards />
-                    <DestinationCards />
-                    <DestinationCards />
-                    <DestinationCards />
-                    <DestinationCards />
-                    <DestinationCards />
-                    <DestinationCards />
+                    <DestinationCards destinationsdata={destinationsdata} />
              
             </div>
     </div>

@@ -1,33 +1,45 @@
 import React, { useState, useEffect, useRef } from 'react'
 import DestinationImages from './DestinationImages'
 import Link from 'next/link'
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogHeader,
-    DialogTitle,
-    DialogTrigger,
-  } from "@/components/ui/dialog"
-import SimpleNavigation from './SimpleNavigation';
 import DestinationHighlights from './DestinationHighlights';
-import BookingForm from '../Forms/BookingForm';
 import { useRouter } from 'next/router';
-import DestinationCards from '../Homepage/DestinationCards';
 import Safaricard from '../Homepage/Safaricard';
+import { getDestinationById } from '@/lib/getDestinationById';
+import DestinationContent from './DestinationContent';
+import TourCard from '../Homepage/TourCard';
 
 
 const DestinationData = () => {
+  
   const [activeSection, setActiveSection] = useState(0);
   const sectionRefs = useRef([]);
+  
 
-  const sections = [
-    { title: 'Overview', content: 'Content for section 1...Content for section 1...Content for section 1...Content for section 1...Content for section 1...Content for section 1...Content for section 1...Content for section 1...Content for section 1...Content for section 1...Content for section 1...Content for section 1...Content for section 1...Content for section 1...Content for section 1...Content for section 1...Content for section 1...Content for section 1...Content for section 1...Content for section 1...Content for section 1...' },
-   
-    // Add more sections as needed
-  ];
 
   const router = useRouter();
+  // const  id  = router?.query?.slug;
+  const [destination, setDestination] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchDestination = async () => {
+      if (router.isReady) {
+        const  id  = router?.query?.slug; // Ensure router is ready and then access query
+        try {
+          const data = await getDestinationById(id);
+          setDestination(data);
+        } catch (err) {
+          setError('Failed to fetch destination');
+          console.error(err);
+        } finally {
+          setLoading(false);
+        }
+      }
+    };
+
+    fetchDestination();
+  }, [router.isReady, router.query]);
 
     const goBack = () => {
       router.back();
@@ -52,11 +64,22 @@ const DestinationData = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [activeSection]);
+  const sections = [
+    { title: 'Overview', content: <DestinationContent contentData = {destination?.description}/> },
+   
+    // Add more sections as needed
+  ];
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>{error}</div>;
+  if (!destination) return <div>No destination found</div>;
+console.log(destination)
+
   return (
     <div className='grid lg:grid-cols-12 md:grid-cols-2  items-start gap-6 h-full sm:h-screen'>
        
         <div className='lg:col-span-6 mx-auto h-full sm:h-screen'>
-            <DestinationImages />
+            <DestinationImages destination={destination?.images} />
         </div>
 
 
@@ -76,7 +99,7 @@ const DestinationData = () => {
           </button> 
         </button>
             </div></div>
-            <DestinationHighlights />
+            <DestinationHighlights destination={destination}  />
         {sections.map((section, index) => (
           <div key={index} ref={(el) => (sectionRefs.current[index] = el)} className="mb-8">
             <h2 className={`text-3xl text-center font-bold py-8 bg-white sticky top-20 ${index === activeSection ? 'text-red-700' : ''}`}>
@@ -88,12 +111,12 @@ const DestinationData = () => {
         ))}   
         <h2 className="text-2xl font-bold tracking-tight text-red-700  sm:text-3xl mb-10  text-center ">Packages Available Here</h2> 
 
-<div className="mt-5 max-sm:mt-5 max-md:mt-5 w-full max-md:w-full max-sm:w-full max-md:mx-auto max-sm:mx-auto max-w-screen mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-8 items-center justify-center">
+<div className="mt-5 max-sm:mt-5 max-md:mt-5 w-full max-md:w-full max-sm:w-full max-md:mx-auto max-sm:mx-auto max-w-screen mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 md:gap-8 items-center justify-center">
   
-        <Safaricard />
-        <Safaricard />
-        <Safaricard />
-        <Safaricard />
+        <Safaricard destination={destination?.packages}/>
+   
+
+        
       </div>
 
 
@@ -105,5 +128,7 @@ const DestinationData = () => {
     </div>
   )
 }
+
+
 
 export default DestinationData

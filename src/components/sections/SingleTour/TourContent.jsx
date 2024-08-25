@@ -1,8 +1,6 @@
 import React from 'react'
-import DestinationHighlights from './DestinationHighlights'
-import SimpleNavigation from './SimpleNavigation';
 
-const DestinationContent = ({ contentData }) => {
+const TourContent = ({ contentData }) => {
   const paragraphs = contentData?.content.map((paragraph, index) => {
     // Since each 'paragraph' has its own 'content' array, we map over it to extract the 'value'
     return paragraph.content.map((textNode, subIndex) => (
@@ -13,4 +11,4 @@ const DestinationContent = ({ contentData }) => {
   return <div>{paragraphs}</div>;
 };
 
-export default DestinationContent
+export default TourContent

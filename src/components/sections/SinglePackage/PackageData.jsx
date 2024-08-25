@@ -11,7 +11,7 @@ import {
 import BookingForm from '../Forms/BookingForm';
 import PackageImages from './PackageImages';
 import PackageHighlights from './PackageHighlights';
-import SimpleNavigation from '../SingleDestination/SimpleNavigation';
+import SimpleNavigation from '../Singletour/SimpleNavigation';
 
 
 const PackageData = () => {
@@ -44,18 +44,25 @@ const PackageData = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [activeSection]);
+
+ 
+
+
+
+
+
   return (
     <div className='grid lg:grid-cols-12 md:grid-cols-2  items-start gap-6 h-full sm:h-screen'>
        
-        <div className='lg:col-span-6 mx-auto h-full sm:h-screen'>
+        <div className='lg:col-span-5 mx-auto h-full sm:h-screen'>
             <PackageImages />
         </div>
 
 
 
         {/* <div className=' lg:col-span-6 mx-auto h-full sm:h-screen  overflow-y-scroll ml-1/3 relative '> */}
-            {/* <DestinationContent /> */}
-            <div className="w-full ml-auto overflow-y-auto lg:col-span-6 mx-auto h-full sm:h-screen relative">
+            {/* <tourContent /> */}
+            <div className="w-full ml-auto overflow-y-auto lg:col-span-7 mx-auto h-full sm:h-screen relative">
             <div className="sticky top-0 py-4 z-10"><SimpleNavigation /></div>
             <PackageHighlights />
         {sections.map((section, index) => (

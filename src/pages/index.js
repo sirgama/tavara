@@ -11,6 +11,8 @@ import Destinations from "@/components/sections/Homepage/Destinations";
 import Book from "@/components/sections/Homepage/Book";
 import Footer from "@/components/sections/Footer/Footer";
 import Head from "next/head";
+import { useEffect, useState } from "react";
+import getPackages from "@/lib/packagesapi";
 
 const playfair_display = Playfair_Display({
   weight: ["400"],
@@ -19,6 +21,23 @@ const playfair_display = Playfair_Display({
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const [apiData, setApiData ] = useState([])
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await getPackages();
+        setApiData(data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchData();
+
+  }, []);
+
+
+
   return (
     <main className="">
       <Head>
@@ -32,8 +51,8 @@ export default function Home() {
         <Hero />
         <Partners />
         <Aboutus />
-        <Aboutsection />
-        <Destinations />
+        <Aboutsection apiData={apiData} />
+        <Destinations apiData={apiData} />
         <Book />
         <WhatsappButton />
         <Footer />

@@ -1,11 +1,31 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 "use client";
 import AllDestinations from "@/components/sections/Destinations/AllDestinations";
 import DestinationsHero from "@/components/sections/Destinations/DestinationsHero";
 import Footer from "@/components/sections/Footer/Footer";
 import NavigationBar from "@/components/sections/NavigationBar";
+import getPackages from "@/lib/packagesapi";
 import Head from "next/head";
+import { useEffect, useState } from "react";
 
-const destinations = () => {
+export default function destinations() {
+
+  const [apiData, setApiData ] = useState([])
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await getPackages();
+        setApiData(data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchData();
+
+  }, []); 
+
+
   return (
     <main>
       <Head>
@@ -17,11 +37,11 @@ const destinations = () => {
       <div>
         <NavigationBar />
         <DestinationsHero />
-        <AllDestinations />
+        <AllDestinations apiData={apiData} />
         <Footer />
       </div>
     </main>
   );
 };
 
-export default destinations;
+
