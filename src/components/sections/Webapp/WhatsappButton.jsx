@@ -8,7 +8,7 @@ const WhatsappButton = () => {
   
     return (
       <button
-        className="cursor-pointer font-semibold overflow-hidden relative z-100 border border-green-500 group px-8 py-2 whatsapp-button md:animate-bounce"
+        className="cursor-pointer font-semibold overflow-hidden  z-100 border border-green-500 group px-8 py-2 whatsapp-button md:animate-bounce"
         onClick={handleClick}
       >
          <div class="svg-wrapper-1">
