@@ -26,7 +26,7 @@ const ContactList = () => {
 
                 <div class="flex justify-between">
                     <div class="my-2">
-                        <p class="font-semibold text-base mb-2">+254 722 000 000</p>
+                        <p class="font-semibold text-base mb-2">+254 742607434</p>
                     
                     </div>
                 
@@ -48,7 +48,7 @@ const ContactList = () => {
 
                 <div class="flex justify-between">
                     <div class="my-2">
-                        <p class="font-semibold text-base mb-2">support@tavaratours.com</p>
+                        <p class="font-semibold text-base mb-2">support@tavaratravels.com</p>
                     
                     </div>
                 
@@ -99,7 +99,7 @@ const ContactList = () => {
 
                 <div class="flex justify-between">
                     <div class="my-2">
-                        <p class="font-semibold text-base mb-2">www.tavaratours.com</p>
+                        <p class="font-semibold text-base mb-2">www.tavaratravels.com</p>
                     
                     </div>
                 
