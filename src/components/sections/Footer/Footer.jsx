@@ -49,7 +49,7 @@ const Footer = () => {
           </p>
           <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-100">
             <Link class="hover:opacity-75" href='/about'> About Tavara </Link>
-            <Link class="hover:opacity-75" href='/safaris'> Packages </Link>
+            <Link class="hover:opacity-75" href='/tours'> Tours </Link>
             <Link class="hover:opacity-75" href='/destinations'> Destinations </Link>
             <Link class="hover:opacity-75" href='/contact'> Careers </Link>
           </nav>
