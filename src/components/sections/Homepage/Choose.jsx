@@ -53,7 +53,7 @@ const Choose = ({apiData}) => {
 
 
   return (
-    <div className="relative w-full bg-choose bg-no-repeat bg-center bg-cover flex items-center  max-md:pt-40 max-sm:pt-48 h-auto md:h-[60vh] max-md:h-[55vh] max-sm:h-full ">
+    <div className="relative w-full bg-choose bg-no-repeat bg-center bg-cover flex items-center  max-md:pt-40 max-sm:pt-48 h-auto  max-sm:h-full ">
            <video id="autoplay-video" className="absolute inset-0 h-full w-full object-cover" autoplay loop controls muted >
     <source
       src="https://res.cloudinary.com/dzhpqlsy9/video/upload/f_auto:video,q_auto/e773srewibrosc6oprto"
