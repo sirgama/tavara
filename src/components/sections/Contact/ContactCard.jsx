@@ -41,7 +41,10 @@ export default function ContactCard() {
          You can also fill this form and our staff will get back to you the soonest possible
         </p>
       </div>
-      <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
+     
+
+
+      <form action="https://formsubmit.co/support@tavaratoursandtravel.com" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
             <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-900">
@@ -98,16 +101,25 @@ export default function ContactCard() {
                 <select
                   id="country"
                   name="country"
-                  className="h-full rounded-md border-0 bg-transparent bg-none py-0 pl-4 pr-9 text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
+                  className="h-full rounded-md border-0 bg-transparent bg-none py-0 pl-4 pr-0 text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
                 >
                   <option>US</option>
                   <option>CA</option>
                   <option>EU</option>
+                  <option>KE</option>
+                  <option>UG</option>
+                  <option>TZ</option>
+                  <option>RW</option>
+                  <option>SA</option>
+                  <option>AU</option>
+                  <option>FR</option>
+                  <option>UK</option>
+                  <option>Others</option>
                 </select>
-                <ChevronDownIcon
+                {/* <ChevronDownIcon
                   aria-hidden="true"
                   className="pointer-events-none absolute right-3 top-0 h-full w-5 text-gray-400"
-                />
+                /> */}
               </div>
               <input
                 id="phone-number"
@@ -119,13 +131,13 @@ export default function ContactCard() {
             </div>
 
             <div className="sm:col-span-2">
-            <label htmlFor="company" className="block text-sm font-semibold leading-6 text-gray-900">
-              Service you're looking for
+            <label htmlFor="description" className="block text-sm font-semibold leading-6 text-gray-900">
+              Short description of the tour you want
             </label>
             <div className="mt-2.5">
               <input
-                id="company"
-                name="company"
+                id="description"
+                name="description"
                 type="text"
                 autoComplete="organization"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -134,30 +146,30 @@ export default function ContactCard() {
           </div>
 
           <div className="sm:col-span-2">
-            <label htmlFor="company" className="block text-sm font-semibold leading-6 text-gray-900">
+            <label htmlFor="kids" className="block text-sm font-semibold leading-6 text-gray-900">
               No. of Kids
             </label>
             <div className="mt-2.5">
               <input
-                id="company"
-                name="company"
-                type="text"
+                id="kids"
+                name="kids"
+                type="number"
                 autoComplete="organization"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
 
-
+          
           <div className="sm:col-span-2">
-            <label htmlFor="company" className="block text-sm font-semibold leading-6 text-gray-900">
-              Your Budget
+            <label htmlFor="budget" className="block text-sm font-semibold leading-6 text-gray-900">
+              What's Your Budget (USD)
             </label>
             <div className="mt-2.5">
               <input
-                id="company"
-                name="company"
-                type="text"
+                id="budget"
+                name="budget"
+                type="number"
                 autoComplete="organization"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
@@ -165,15 +177,18 @@ export default function ContactCard() {
           </div>
 
 
+       
+
+
           <div className="sm:col-span-2">
-            <label htmlFor="company" className="block text-sm font-semibold leading-6 text-gray-900">
+            <label htmlFor="adults" className="block text-sm font-semibold leading-6 text-gray-900">
               No. of adults
             </label>
             <div className="mt-2.5">
               <input
-                id="company"
-                name="company"
-                type="text"
+                id="adults"
+                name="adults"
+                type="number"
                 autoComplete="organization"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
@@ -183,24 +198,23 @@ export default function ContactCard() {
 
 
           <div className="sm:col-span-2">
-            <label htmlFor="company" className="block text-sm font-semibold leading-6 text-gray-900">
-              How long would you like to travel
+            <label htmlFor="days" className="block text-sm font-semibold leading-6 text-gray-900">
+              How long would you like to experience this? (Days)
             </label>
             <div className="mt-2.5">
               <input
-                id="company"
-                name="company"
-                type="text"
+                id="days"
+                name="days"
+                type="number"
                 autoComplete="organization"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
 
-          </div>
           <div className="sm:col-span-2">
             <label htmlFor="message" className="block text-sm font-semibold leading-6 text-gray-900">
-              Message
+              Additional information You'd love to share
             </label>
             <div className="mt-2.5">
               <textarea
@@ -212,6 +226,9 @@ export default function ContactCard() {
               />
             </div>
           </div>
+
+          </div>
+      
  
         </div>
         <div className="mt-10">
@@ -219,10 +236,11 @@ export default function ContactCard() {
             type="submit"
             className="block w-full rounded-md bg-red-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
-            Enquire now
+            Book now
           </button>
         </div>
       </form>
+
     </div>
   )
 }

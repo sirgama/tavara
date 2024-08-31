@@ -31,7 +31,7 @@ const WhatsappButton = () => {
   <span className=''>Whatsapp Chat</span>
       </button>
     );
-  };
+  };  
   
   export default WhatsappButton;
   
