@@ -44,7 +44,7 @@ export default function ContactCard() {
      
 
 
-      <form action="https://formsubmit.co/support@tavaratoursandtravel.com" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
+      <form action="https://formsubmit.co/4d06b4584b33aa7fc6cae277ef97af17" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
             <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-900">
