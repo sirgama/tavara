@@ -239,6 +239,8 @@ export default function ContactCard() {
             Book now
           </button>
         </div>
+        <input type="hidden" name="_template" value="table"></input>
+        
       </form>
 
     </div>

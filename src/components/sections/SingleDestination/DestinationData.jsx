@@ -8,6 +8,7 @@ import { getDestinationById } from '@/lib/getDestinationById';
 import DestinationContent from './DestinationContent';
 import TourCard from '../Homepage/TourCard';
 import PackageCard from '../Homepage/PackageCard';
+import { ClimbingBoxLoader } from 'react-spinners';
 
 
 const DestinationData = () => {
@@ -71,7 +72,7 @@ console.log(destination)
     // Add more sections as needed
   ];
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <div className='flex items-center justify-center h-screen w-screen ' ><ClimbingBoxLoader color='#EF4444' /></div>;
   if (error) return <div>{error}</div>;
   if (!destination) return <div>No destination found</div>;
 console.log(destination)

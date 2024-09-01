@@ -19,6 +19,7 @@ import { getPackageById } from '@/lib/getPackageById';
 import PackageContent from './PackageContent';
 import PackageImages from './PackageImages';
 import PackageHighlights from './PackageHighlights';
+import { ClimbingBoxLoader } from 'react-spinners';
 
 
 const PackageData = () => {
@@ -81,7 +82,7 @@ const PackageData = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [activeSection]);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <div className='flex items-center justify-center h-screen w-screen ' ><ClimbingBoxLoader color='#EF4444' /></div>;
   if (error) return <div>{error}</div>;
   if (!tour) return <div>No tour found</div>;
 
