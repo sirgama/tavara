@@ -34,7 +34,7 @@ const ContactList = () => {
             </div>
         </div>
 
-        <div class="relative bg-white py-6 px-6 rounded-3xl w-64 h-40 my-4 shadow-md">
+        <div class="relative bg-white py-6 px-3 rounded-3xl w-68 h-40 my-4 shadow-md">
             <div class=" text-white flex items-center absolute rounded-full py-4 px-4 shadow-xl bg-green-500 left-4 -top-6">
               
             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -48,7 +48,7 @@ const ContactList = () => {
 
                 <div class="flex justify-between">
                     <div class="my-2">
-                        <p class="font-semibold text-base mb-2">support@tavaratravels.com</p>
+                        <p class="font-semibold text-base mb-2">bookings@tavaratravels.com</p>
                     
                     </div>
                 
