@@ -120,7 +120,7 @@ const PackageData = () => {
          >Book this Option
 </button> </DialogTrigger >
   
-  <DialogContent tour={tour}>
+  <DialogContent tour={tour}  className='h-full overflow-scroll'>
     <DialogHeader tour={tour}>
       <DialogDescription tour={tour}>
        <BookingForm tour={tour} />
