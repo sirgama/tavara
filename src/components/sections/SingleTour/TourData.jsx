@@ -110,7 +110,7 @@ const TourData = () => {
             <p className="mt-4 mx-10">{section.content}</p>
         
           </div>
-        ))}   <div className="py-6">
+        ))}   <div className="py-6 h-auto overflow-y-scroll ">
          <Dialog tour={tour}>
            <DialogTrigger tour={tour} > <button
            
@@ -119,7 +119,7 @@ const TourData = () => {
          >Book this Option
 </button> </DialogTrigger >
   
-  <DialogContent tour={tour}>
+  <DialogContent tour={tour} className=''>
     <DialogHeader tour={tour}>
       <DialogDescription tour={tour}>
        <BookingForm tour={tour} />

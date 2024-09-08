@@ -4,7 +4,15 @@ import { getPackageById } from '@/lib/getPackageById'
 
 const Safaricard = ({destination}) => {
 
-  console.log(destination)
+  const formatCurrency = (amount, currency) => {
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: currency,
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    }).format(amount);
+  };
+
   return (
   
  <>
@@ -72,7 +80,7 @@ const Safaricard = ({destination}) => {
  
  </div>
  <p class="block  text-lg font-light leading-relaxed text-start text-gray-900 antialiased">
-       <span className='font-bold'>Cost:</span> Kshs {singlePackage.cost} {' '} PPS
+       <span className='font-bold'>Cost:</span> {formatCurrency(singlePackage.cost, singlePackage.currency ? "USD" : "KES")} {' '} pps
        </p>
  
 </div>

@@ -4,7 +4,14 @@ import Link from 'next/link'
 
 const TourCard = ({tourData}) => {
 
-
+  const formatCurrency = (amount, currency) => {
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: currency,
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    }).format(amount);
+  };
 
 
 
@@ -70,7 +77,7 @@ const TourCard = ({tourData}) => {
        
        </div>
        <p class="block  text-lg font-light leading-relaxed text-start text-gray-900 antialiased">
-       <span className='font-bold'>Cost:</span> Kshs {tour.tourCost} {' '} PPS
+       <span className='font-bold'>Cost:</span> {formatCurrency(tour.tourCost, tour.currency ? "USD" : "KES")} {' '} pps
        </p>
        <p class="block mt-4 text-base font-light leading-relaxed text-start text-gray-700 antialiased">
        <span className='font-bold'>Availability: </span> On Request

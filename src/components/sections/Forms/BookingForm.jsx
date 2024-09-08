@@ -6,7 +6,7 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Field, Label, Switch } from '@headlessui/react'
 
 export default function BookingForm({tour}) {
-    console.log(tour)
+
   const [agreed, setAgreed] = useState(false)
 
   return (

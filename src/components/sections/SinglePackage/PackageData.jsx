@@ -111,7 +111,7 @@ const PackageData = () => {
             <p className="mt-4 mx-10">{section.content}</p>
         
           </div>
-        ))}   <div className="py-6">
+        ))}   <div className="py-6 h-screen overflow-y-scroll">
          <Dialog tour={tour}>
            <DialogTrigger tour={tour} > <button
            

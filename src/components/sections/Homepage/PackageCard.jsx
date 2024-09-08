@@ -5,6 +5,14 @@ import { getPackageById } from '@/lib/getPackageById'
 
 const PackageCard = ({destination}) => {
     const [packageDetails, setPackageDetails] = useState([]);
+    const formatCurrency = (amount, currency) => {
+      return new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: currency,
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+      }).format(amount);
+    };
 
     useEffect(() => {
         // Function to fetch package details by IDs
@@ -93,7 +101,7 @@ console.log(packageDetails)
        
        </div>
        <p class="block  text-lg font-light leading-relaxed text-start text-gray-900 antialiased">
-       <span className='font-bold'>Cost:</span> Kshs {tour.cost} {' '} PPS
+       <span className='font-bold'>Cost:</span> {formatCurrency(tour.cost, tour.currency ? "USD" : "KES")} {' '} pps
        </p>
        <p class="block mt-4 text-base font-light leading-relaxed text-start text-gray-700 antialiased">
        <span className='font-bold'>Availability: </span> On Request

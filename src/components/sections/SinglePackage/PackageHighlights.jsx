@@ -1,6 +1,14 @@
 import React from 'react'
 
 const PackageHighlights = ({ contentData }) => {
+    const formatCurrency = (amount, currency) => {
+        return new Intl.NumberFormat('en-US', {
+          style: 'currency',
+          currency: currency,
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2,
+        }).format(amount);
+      };
   return (
     <div>
                 <div className="mx-auto max-w-2xl text-center my-8 md:my-8">
@@ -80,7 +88,7 @@ const PackageHighlights = ({ contentData }) => {
 
                 <div class="flex justify-between">
                     <div class="my-2">
-                        <p class="font-semibold text-base mb-2">Kes {contentData.cost} PPS</p>
+                        <p class="font-semibold text-base mb-2"> {formatCurrency(contentData.cost, contentData.currency ? "USD" : "KES")} pps</p>
                     
                     </div>
                 
