@@ -30,7 +30,7 @@ function NavigationMenuDemo() {
       <NavigationMenuItem>
           <Link href="/about" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              About Tavara
+              About cojani
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>

@@ -60,7 +60,7 @@ const Partners = () => {
       />
       <div className="mb-6 max-md:mb-3 max-sm:mb-3">
         {/* <h2 className="font-semibold text-[#5E6282] text-center">
-          The Tavara Way
+          The cojani Way
         </h2> */}
         {/* <h1
           className={cn(

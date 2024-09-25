@@ -15,7 +15,7 @@ const Aboutus = () => {
                 <div className="lg:col-span-5 mx-auto">
                    
 
-                    <h4 className="font-semibold lg:leading-normal leading-normal text-center md:text-left text-lg lg:text-lg mt-2 mb-5 ">   <span className="text-red-700">About Tavara</span>   </h4>
+                    <h4 className="font-semibold lg:leading-normal leading-normal text-center md:text-left text-lg lg:text-lg mt-2 mb-5 ">   <span className="text-red-700">About cojani</span>   </h4>
 
                     <h4 className="font-semibold lg:leading-normal leading-normal text-4xl lg:text-5xl mt-2 mb-5">
                 {" "}
@@ -27,7 +27,7 @@ const Aboutus = () => {
               </h4>
             
                     <p className="text-gray-700 text-lg max-w-xl">
-                    At Tavara Tours and Travel, we believe that travel is more than just a journey — it's an opportunity to create lasting memories, discover hidden gems, 
+                    At cojani Tours and Travel, we believe that travel is more than just a journey — it's an opportunity to create lasting memories, discover hidden gems, 
 and experience the true beauty of Kenya. Our core ethos is rooted in delivering personalized, safe, and unforgettable travel experiences that exceed your expectations. Whether you’re exploring the wild savannas, immersing yourself in local cultures, or unwinding on pristine beaches, we are dedicated to ensuring that your adventure is as seamless and enjoyable as possible.
 
                     </p>
@@ -42,7 +42,7 @@ and experience the true beauty of Kenya. Our core ethos is rooted in delivering 
                             src = '/abtimg.jpg'
                             height = {1500}
                             width = {1500}
-                            alt = 'Tavara Tours'
+                            alt = 'cojani Tours'
                             className = 'rounde'
                             />
                 </div>
