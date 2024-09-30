@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
-import logo from '../../../public/cojani.png'
+import logo from '../../../public/tavara.png'
 import NavigationMenuDemo from './Webapp/Navexample'
 import Link from 'next/link'
 
@@ -11,7 +11,7 @@ const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Destinations', href: '/destinations' },
   { name: 'Tours', href: '/tours' },
-  { name: 'About cojani', href: '/about' },
+  { name: 'About Tavara', href: '/about' },
   { name: 'Contact us', href: '/contact' },
 ]
 
@@ -33,13 +33,13 @@ const NavigationBar = () => {
     <nav className="w-auto flex  justify-between p-6 sticky " aria-label="Global">
       <div className="flex lg:flex-1 ">
        {!mobileMenuOpen &&  <Link href="/" className="-m-1.5 p-1.5">
-          <span className="sr-only">cojani Tours</span>
+          <span className="sr-only">Tavara Tours</span>
           <Image
             className="h-12 w-auto"
             width = {700}
             height = {700}
             src={logo}
-            alt="cojani Tours"
+            alt="Tavara Tours"
           />
         </Link>}
       </div>
@@ -75,13 +75,13 @@ const NavigationBar = () => {
       <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-cover bg-gray-900 bg-opacity-80 backdrop-filter backdrop-blur-lg px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
         <div className="flex items-center justify-between">
           <Link href="/" className="-m-1.5 p-1.5">
-            <span className="sr-only">cojani</span>
+            <span className="sr-only">Tavara</span>
             <Image
               className="h-14 w-auto"
               width={700}
               height = {700}
               src={logo}
-              alt="cojani Tours"
+              alt="Tavara Tours"
             />
           </Link>
          <Link href='#'> <button
