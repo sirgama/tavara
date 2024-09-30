@@ -48,7 +48,7 @@ const ContactList = () => {
 
                 <div class="flex justify-between">
                     <div class="my-2">
-                        <p class="font-semibold text-base mb-2">bookings@tavaratravels.com</p>
+                        <p class="font-semibold text-base mb-2">bookings@cojanitravels.com</p>
                     
                     </div>
                 
@@ -99,7 +99,7 @@ const ContactList = () => {
 
                 <div class="flex justify-between">
                     <div class="my-2">
-                        <p class="font-semibold text-base mb-2">www.tavaratravels.com</p>
+                        <p class="font-semibold text-base mb-2">www.cojanitravels.com</p>
                     
                     </div>
                 

@@ -24,7 +24,7 @@ const DestinationCards = ({destinationsdata} ) => {
             {destination.name}
           </h2> 
           <h5 class="mb-4 block font-sans text-xl font-semibold leading-snug tracking-normal text-gray-400 antialiased">
-            By Tavara Tours
+            By cojani Tours
           </h5>
           <Link href={`/destination/${destination.id}`}class="block w-full select-none  bg-red-500 py-3.5 px-7 text-center align-middle font-sans text-sm font-bold uppercase text-white border-2 border-red-500 shadow-md shadow-red-500/20 transition-all hover:shadow-lg hover:shadow-red-500/40 hover:bg-transparent hover:text-red-500 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
             type="button"

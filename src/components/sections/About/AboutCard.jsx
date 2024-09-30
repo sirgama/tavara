@@ -23,7 +23,7 @@ const AboutCard = () => {
               </h4>
 
               <p className="text-gray-700 text-lg max-w-xl">
-                Tavara Tours and Travels was born out of a passion for
+                cojani Tours and Travels was born out of a passion for
                 showcasing the breathtaking beauty and rich cultural tapestry of
                 Kenya. Our founders, seasoned travelers themselves, recognized
                 the need for a tour company that could provide authentic,
@@ -38,7 +38,7 @@ const AboutCard = () => {
               </h4>
 
               <p className="text-gray-700 text-lg max-w-xl mb-10">
-              When you choose Tavara Tours and Travel, you’re not just booking a trip—you’re partnering with a company that values your safety, satisfaction, and the sustainability
+              When you choose cojani Tours and Travel, you’re not just booking a trip—you’re partnering with a company that values your safety, satisfaction, and the sustainability
 of the destinations we explore. We are dedicated to making your journey through Kenya an extraordinary and worry-free experience. Trust us to handle every detail,
 so you can focus on enjoying the adventure of a lifetime.
               </p>
@@ -79,7 +79,7 @@ so you can focus on enjoying the adventure of a lifetime.
               </h4>
 
               <p className="text-gray-700 text-lg max-w-xl">
-              At Tavara Tours and Travel, we believe that travel is more than just a journey — it's an opportunity to create lasting memories, discover hidden gems, 
+              At cojani Tours and Travel, we believe that travel is more than just a journey — it's an opportunity to create lasting memories, discover hidden gems, 
 and experience the true beauty of Kenya. Our core ethos is rooted in delivering personalized, safe, and unforgettable travel experiences that exceed your expectations. Whether you’re exploring the wild savannas, immersing yourself in local cultures, or unwinding on pristine beaches, we are dedicated to ensuring that your adventure is as seamless and enjoyable as possible.
 
               </p>
@@ -93,7 +93,7 @@ and experience the true beauty of Kenya. Our core ethos is rooted in delivering 
 
               <p className="text-gray-700 text-lg max-w-xl mb-10">
               We understand that your travel experience should be as unique as you are. That’s why we take great care in crafting customized journeys that are far from the typical 
-tourist routes. We seek out hidden treasures and off-the-beaten-path destinations, ensuring that every trip with Tavara Tours and Travel is a one-of-a-kind adventure.
+tourist routes. We seek out hidden treasures and off-the-beaten-path destinations, ensuring that every trip with cojani Tours and Travel is a one-of-a-kind adventure.
 
 At the heart of our company is a commitment to responsible tourism. We partner with local communities and conservationists who share our vision of sustainable travel,
 ensuring that our tours not only delight our clients but also benefit the environment and the people of Kenya.

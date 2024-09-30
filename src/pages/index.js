@@ -41,10 +41,10 @@ export default function Home() {
   return (
     <main className="">
       <Head>
-        <title>Tavara Tours and Travel </title>
+        <title>cojani Tours and Travel </title>
         <meta name="description" content="Explore top travel destinations" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon/png" href="/tavara.png" />
+        <link rel="icon/png" href="/cojani.png" />
       </Head>
       <div>
         <NavigationBar />
